@@ -4,15 +4,15 @@ Vimos que variáveis são compartimentos da memória que armazenam dados. Nos ex
 
 Podemos agrupar os tipos possíveis no Python em algumas categorias:
 
-| CATEGORIA  | TIPOS                        |
-|------------|------------------------------|
-| Numérico   | int, float, complex          |
-| Texto      | str                          |
-| Lógico     | bool                         |
-| Sequência  | list, tuple, range           |
-| Mapeamento | dict                         |
-| Conjunto   | set, frozenset               |
-| Binário    | bytes, bytearray, memoryview |
+| CATEGORIA  | TIPOS                                          |
+|------------|------------------------------------------------|
+| Numérico   | ```int```, ```float```, ```complex```          |
+| Texto      | ```str```                                      |
+| Lógico     | ```bool```                                     |
+| Sequência  | ```list```, ```tuple```, ```range```           |
+| Mapeamento | ```dict```                                     |
+| Conjunto   | ```set```, ```frozenset```                     |
+| Binário    | ```bytes```, ```bytearray```, ```memoryview``` |
 
 Vamos detalhar as três primeiras categorias por enquanto, por estas serem as mais comuns. As demais terão atenção particular em momento oportuno.
 
