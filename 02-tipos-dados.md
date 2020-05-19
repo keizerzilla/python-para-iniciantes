@@ -51,13 +51,13 @@ Python possui uma função muito útil capaz de retornar o tipo de dado de uma v
 ```python
 raiz = 4
 print(type(raiz))
->>int
+#>>int
 ```
 
 ```python
 cpf = "123456789"
 print(type(cpf))
->>str
+#>>str
 ```
 
 A função type() é muito importante quando se deseja testar o tipo de uma variável antes de tentar realizar uma operação sobre ela, evitando assim possíveis erros.
@@ -69,7 +69,7 @@ Vimos que uma variável pode armazenar tipos diferentes em momentos diferentes d
 ```python
 num1 = "34"
 print(type(num1))
->>str
+#>>str
 
 # num1 é uma variável que guarda a string "34"
 # o resultado da função type(), portanto, será str
@@ -79,7 +79,7 @@ print(type(num1))
 
 num2 = int(num1)
 print(type(num2))
->>int
+#>>int
 
 # num2 foi gerada a partir da conversão de num1 em int
 # o resultao de type(), agora, será int!
@@ -89,7 +89,7 @@ print(type(num2))
 
 num3 = float(num1)
 print(type(num3))
->>float
+#>>float
 
 # veja que, agora, convertemos de str para float
 # pergunta: podemos fazer o caminho inverso?
@@ -97,7 +97,7 @@ print(type(num3))
 
 num4 = str(num2)
 print(type(num4))
->>str
+#>>str
 ```
 
 De maneira resumida:
@@ -114,9 +114,9 @@ A resposta, infelizmente, é **não**. A função input() retorna toda informaç
 
 ```python
 raio = input("Qual o raio do círculo? ")
->>6.66
+#>>6.66
 print(type(raio))
->>str
+#>>str
 ```
 
 No exemplo acima, a razão nos diz que a variável ```raio``` deve ser tratada como um número real (em jargão de programação: ponto flutuante). Mas a função input() não tenta adivinhar o tipo da informação; é responsabilidade do programar realizar a **conversão de tipo**. Para isso, basta usar as funções de tipo que vimos na seção anterior. Refazendo o exemplo:
@@ -124,10 +124,10 @@ No exemplo acima, a razão nos diz que a variável ```raio``` deve ser tratada c
 
 ```python
 raio = input("Qual o raio do círculo? ")
->>6.66
+#>>6.66
 raio = float(raio)
 print(type(raio))
->>float
+#>>float
 ```
 
 Pronto, agora podemos manipular ```raio``` como uma variável ponto flutuante. Podemos realizar multiplicações, adições, divisões... Outro detalhe é que o código acima não criou uma nova variável (por exemplo, ```raio2```) só para guardar o resultado da conversão. Podemos reusar a variável que já tinhamos. Essa ressignificação é válida, além de boa prática de programação!
