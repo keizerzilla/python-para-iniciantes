@@ -69,6 +69,7 @@ Vimos que uma variável pode armazenar tipos diferentes em momentos diferentes d
 ```python
 num1 = "34"
 print(type(num1))
+>>str
 
 # num1 é uma variável que guarda a string "34"
 # o resultado da função type(), portanto, será str
@@ -78,6 +79,7 @@ print(type(num1))
 
 num2 = int(num1)
 print(type(num2))
+>>int
 
 # num2 foi gerada a partir da conversão de num1 em int
 # o resultao de type(), agora, será int!
@@ -87,6 +89,7 @@ print(type(num2))
 
 num3 = float(num1)
 print(type(num3))
+>>float
 
 # veja que, agora, convertemos de str para float
 # pergunta: podemos fazer o caminho inverso?
@@ -94,6 +97,7 @@ print(type(num3))
 
 num4 = str(num2)
 print(type(num4))
+>>str
 ```
 
 De maneira resumida:
