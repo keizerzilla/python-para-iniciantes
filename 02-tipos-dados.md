@@ -115,7 +115,7 @@ print(type(raio))
 >>str
 ```
 
-No exemplo acima, a razão nos diz que a variável ```raio``` deve ser tratada como um número real (em jargão de programação: ponto flutuante). Mas a função input() não tentar adivinhar o tipo da informação; é papel do programar realizar a **conversão de tipo**. Para isso, basta usar as funções de tipo que vimos na seção anterior. Refazendo o exemplo:
+No exemplo acima, a razão nos diz que a variável ```raio``` deve ser tratada como um número real (em jargão de programação: ponto flutuante). Mas a função input() não tenta adivinhar o tipo da informação; é responsabilidade do programar realizar a **conversão de tipo**. Para isso, basta usar as funções de tipo que vimos na seção anterior. Refazendo o exemplo:
 
 
 ```python
