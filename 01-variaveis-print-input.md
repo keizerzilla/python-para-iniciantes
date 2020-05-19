@@ -35,8 +35,7 @@ A função print() exibe uma mensagem na tela. Seu uso é bem simples: basta cha
 
 ```python
 print("Olá, Mundo!")
-
->>Olá, Mundo!
+#>>Olá, Mundo!
 ```
 
 Note que no exemplo acima, as aspas do texto "Olá, Mundo!" não aparecem no resultado. Elas servem como delimitadores de textos. Mais detalhes sobre textos quando falarmos de tipos de dados.
@@ -47,10 +46,9 @@ Também é possível mostrar o conteúdo de variáveis:
 num1 = 5
 num2 = 10
 print(num1)
+#>>5
 print(num2)
-
->>5
->>10
+#>>10
 ```
 
 ### A função de entrada mais comum: input()
@@ -59,8 +57,7 @@ Enquanto a função print() exibe dados, ou seja, é um função de saída, a fu
 
 ```python
 idade = input("Quantos anos você tem? ")
+#>>Quantos anos você tem? 28
 print(idade)
-
->>Quantos anos você tem? 28
->>28
+#>>28
 ```
