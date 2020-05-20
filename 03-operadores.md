@@ -8,7 +8,7 @@ Um operador é um símbolo que manipula valores e variáveis. Podemos agrupar os
 | Texto     | ```+```, ```*```                                                |
 | Lógico    | ```and```, ```or```, ```not```                                  |
 
-Algumas observações antes de continuarmos. 1) Discutiremos os operadores das categorias *Sequência*, *Mapeamento*, *Conjunto* e *Binário* em tempo oportuno. 2) Existe uma categoria especial de operadores, chamados **operadores relacionais**, que veremos na **Parte 04: Condicionais**.
+Algumas observações antes de continuarmos. 1) Discutiremos os operadores das categorias *Sequência*, *Mapeamento*, *Conjunto* e *Binário* em tempo oportuno. 2) Existe uma categoria especial de operadores, chamados **operadores relacionais**, que veremos na **Parte 04: Condições**.
 
 ### Operadores numéricos
 
