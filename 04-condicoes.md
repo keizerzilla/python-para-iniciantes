@@ -113,7 +113,13 @@ if idade < 30:
 
 ### Condicionais: else
 
-O ```else``` é o contraponto do ```if```. Enquanto este é o "se", aquele é o "se não".
+O ```else``` é o contraponto do ```if```. Enquanto este é o "se", aquele é o "se não". Sua estrutura é:
+
+```
+<presença de algum if>
+else:
+    <bloco do else>
+```
 
 Vamos tomar como exemplo o último exemplo acima, o programa que diz se você é novo ou velho. Note que o segundo ```if``` serve como contraponto da condição do primeiro. Afinal, se ```idade``` não for maior ou igual a 30, ela só pode ser menor! Podemos substituir o segundo ```if``` por um ```else```:
 
@@ -133,7 +139,15 @@ Todo bloco ```else``` depende de um ```if```. A associação é dada, mais uma v
 
 ### Condicionais: elif
 
-Python dispõe de uma estrutura condicional inexistente em muitas outras linguagens de programação: ```elif```. Este representa a "soma" de um ```else``` com um ```if```. Ou seja, ele é um bloco ```else``` (contraponto a um "se"), mas que só executa mediante a uma condição.
+Python dispõe de uma estrutura condicional inexistente em muitas outras linguagens de programação: ```elif```. Este representa a "soma" de um ```else``` com um ```if```. Ou seja, ele é um bloco ```else``` (contraponto a um "se"), mas que só executa mediante a uma condição. Sua estrutura básica é:
+
+```
+<presença de algum if>
+elif <condição>:
+    <bloco do elif>
+```
+
+Exemplo:
 
 ```python
 idade = int(input("Qual é a sua idade? "))
@@ -149,3 +163,27 @@ else:
 ```
 
 Mais uma versão do programa da idade, dessa vez nós testamos se ```idade``` é exatamente igual a 30 usando ```elif``` para executar um bloco de mensagens especial.
+
+### Condições dentro de condições: estruturas aninhadas
+
+A lógica do nosso programa (o nosso algoritmo) pode, e muitas vezes será, mais complicado que o normal. É perfeitamente possível que precisemos testar outras condições caso algum tenha sido satisfeita. Em termos de código: é perfeitamente possível que precisemos escrever uma estrutura ```if``` dentro do bloco verdade de outro ```if```. Quando fazemos isso, dizemos que estamos usando **aninhamento**, ou um **estrutura aninhada**; aninhar é sequenciar blocos de código semelhantes um dentro do outro.
+
+Voltemos ao programa anterior, o que diz se você é velho ou jovem. Vamos supor que o programa deve exibir uma mensagem especial caso o usuário tenha mais que 50 anos. A semântica (significado) disso é perceber que a condição ```idade > 50``` depende previamente que a condição ```idade > 30``` seja verdade. Veja:
+
+```python
+idade = int(input("Qual é a sua idade? "))
+if idade > 30:
+    print("Poxa, você é velho!")
+    print("Não esqueça de ir ao médico frequentemente!")
+    if idade > 50:
+        print("Eita, tudo isso?")
+        print("Faça caminhadas diariamente!")
+elif idade == 30:
+    print("Eita, bem na fronteira!")
+    print("Hora de aproveitar a vida enquanto pode!")
+else:
+    print("Você é novo, têm muito pela frente ainda!")
+    print("Mas cuidado com o álcool!")
+```
+
+A solução foi aninhar uma nova estrutura de ```if``` dentro do bloco verdade do primeiro. Note que valores entre 31 e 50 não ativaram as novas mensagens, pois estes não avaliam verdade para a nova condição.
