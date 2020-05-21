@@ -31,7 +31,7 @@ y = 10
 z = 3
 w = 7
 
-x == y     # a é igual a b?
+x == y     # x é igual a y?
 #>False
 y > x      # y é maior que x?
 #>True
@@ -137,7 +137,7 @@ Python dispõe de uma estrutura condicional inexistente em muitas outras linguag
 
 ```python
 idade = int(input("Qual é a sua idade? "))
-if idade >= 30:
+if idade > 30:
     print("Poxa, você é velho!")
     print("Não esqueça de ir ao médico frequentemente!")
 elif idade == 30:
