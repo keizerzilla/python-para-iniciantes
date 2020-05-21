@@ -29,7 +29,7 @@ _**DIVIRTA-SE!**_
 | Industrial  | até 5000      | R$ 0,55 |
 |             | acima de 5000 | R$ 0,60 |
 
-**4.8:** Escreva um programa que leia um número e que diz se ele é par ou ímpar.
+**4.8:** Escreva um programa que leia um número e que diz se ele é par ou ímpar (DICA: operador aritmético ```%```).
 
 **4.9:** Escreva um programa que leia um número e que diz se ele é positivo ou negativo.
 
