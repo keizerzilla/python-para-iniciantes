@@ -47,7 +47,7 @@ _**DIVIRTA-SE!**_
 | entre 4.0 e 6.0  | D        |
 | entre zero e 4.0 | E        |
 
-**4.13:** Escreva um programa que leia um ano e que informe o usuário se este é ou não bissexto.
+**4.13:** Escreva um programa que leia um ano (ex: 1917) e que informe se este é ou não bissexto.
 
 **4.14:** Faça um programa que avalia o nível de suspeita de um indivíduo com relação a um crime. O programa deve fazer as seguintes perguntas:
 
