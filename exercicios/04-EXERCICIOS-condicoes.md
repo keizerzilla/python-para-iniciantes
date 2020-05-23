@@ -14,7 +14,7 @@ _**DIVIRTA-SE!**_
 
 **4.4:** Você foi contratado pelo setor financeiro de uma empresa. A empresa promoverá aumentos de salário a todos os empregados. Foi requisitado um programa que calcula o valor desse aumento, que é calculado com base no salário atual. Para salários superiores a R$ 1.250,00, o aumento será de 10%. Para inferiores ou iguais a este valor, 15%.
 
-**4.5:** Uma empresa de ônibus interestadual precisa de um programa que calcula o preço de uma viagem com base na distância percorrida. O programa deve perguntar a distância, em km, de uma viagem e calcular o seu preço, cobrando R$ 0,50 por km para viagens de até 20 km e R$ 0,45 para viagens mais longas.
+**4.5:** Uma empresa de ônibus interestadual precisa de um programa que calcula o preço de uma viagem com base na distância percorrida. O programa deve perguntar a distância de una viagem, em km, e calcular o seu preço, cobrando R$ 0,50 por km para viagens de até 20 km e R$ 0,45 para viagens mais longas.
 
 **4.6:** Escreva um programa que leia dois números e que pergunte qual operação aritmética você deseja realizar. As operações possíveis são adição (+), subtração (-), multiplicação (*) e divisão (/). Exiba o resultado da operação realizada.
 
