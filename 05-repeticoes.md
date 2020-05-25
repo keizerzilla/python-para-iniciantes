@@ -197,6 +197,6 @@ print("FIM")
 #>FIM
 ```
 
-#### Pulando uma iteração: continue
+### Pulando uma iteração: continue
 
 Python também possui um mecanismo para pular diretamente para a próxima iteração de um laço, ignorando assim quaisquer instruções que ainda poderiam ser executadas; a palavra ```continue``` é responsável por isso. Seu uso é mais comum em laços do tipo ```for```, portanto retomaremos seu uso (com exemplos) na próxima aula.
