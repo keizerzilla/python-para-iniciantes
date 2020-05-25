@@ -164,9 +164,9 @@ while n <= maximo:
 
 Um erro muito comum, principalmente entre programadores iniciantes, é a implementação incorreta da condição do ```while``` ou do mecanismo de atualização da variável da condição. Tais equívocos podem levar o laço a nunca atingir sua condição de parada e o programa executaria as intruções do bloco infinitamente. Chamamos esse fenômemo de **laço infinito**.
 
-Entretanto, podemos ter laços infinitos propositais. Um programa que é interrompido de maneira arbitrária por um agente externo, por exemplo o usuário, não pode ter uma condição de parada explícita. e são escritos como ```while True:```. Veremos a seguir como abortar a execução de uma laço dessa natureza.
+Entretanto, podemos ter laços infinitos propositais. Um programa que é interrompido de maneira arbitrária por um agente externo, por exemplo o usuário, não pode ter uma condição de parada explícita. e são escritos como ```while True:```.
 
-### Interrompendo um laço infinito: break
+### Interrompendo um laço: break
 
 Python dispõe de um comando especial responsável por abortar (ou quebrar) a execução de uma repetição: ```break```. Se o laço atinge uma linha com essa palavra, ele é automaticamente encerrado e a execução do programa continua nas demais linhas depois da repetição.
 
@@ -196,3 +196,7 @@ print("FIM")
 #>número: 0
 #>FIM
 ```
+
+#### Pulando uma iteração: continue
+
+Python também possui um mecanismo para pular diretamente para a próxima iteração de um laço, ignorando assim quaisquer instruções que ainda poderiam ser executadas; a palavra ```continue``` é responsável por isso. Seu uso é mais comum em laços do tipo ```for```, portanto retomaremos seu uso (com exemplos) na próxima aula.
