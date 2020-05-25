@@ -79,6 +79,8 @@ A execução desse programa seria:
 5. De volta a linha da condição, testamos novamente ```x <= 5```. Como ```x``` vale ```2```, tal condição é verdade e entramos novamente no bloco;
 6. Esse processo se repete até que a condição do ```while``` seja falsa, e então o programa segue a execução. Como não há mais nenhuma instrução, o programa termina.
 
+Em termos gerais, uma estrutura de repetição é aquele que repete um conjunto de instruções até que uma dada condição não seja mais avaliada como verdadeira. Chamamos de **iteração** cada vez que a repetição repete o seu conjunto de instruções. Aproveito para lembrar também que é muito comum chamarmos uma estrutura de repetição de **laço** ou **loop**, jargões de programação mais usuais.
+
 Veja que uma estrutura de repetição adiciona uma dinâmica a mais aos nossos programas. Aquele problema de quantos elementos serão impressos fica agora bem fácil de resolver, bastando apenas mudar o valor de comparação na condição do ```while```. Um programa genérico que imprime uma sequência de tamanho variável poderia ser:
 
 ```python
@@ -97,4 +99,100 @@ while x <= n:
 #>7
 #>8
 ```
-**CONTINUAR...**
+
+### Aninhamento de repetições
+
+Assim como condições aninhadas, também é perfeitamente possível aninhar estruturas de repetição. Imagine um programa que exibe a tabuada de multiplicar de um número inteiro escolhido pelo usuário:
+
+```python
+n = int(input("Qual número deseja visualizar a tabuada? "))
+m = 1 # variável que guarda o multiplicador
+while m <= 10:
+    print(n, "x", m, "=", n*m)
+    m = m + 1
+#>Qual número deseja visualizar a tabuada? 3
+#>3 x 1 = 3
+#>3 x 2 = 6
+#>3 x 3 = 9
+#>3 x 4 = 12
+#>3 x 5 = 15
+#>3 x 6 = 18
+#>3 x 7 = 21
+#>3 x 8 = 24
+#>3 x 9 = 27
+#>3 x 10 = 30
+```
+
+Como modificaríamos esse programa para exibir todas as tabuadas de 1 até um outro número também escolhido pelo usuário? O primeiro passo é perceber que código anterior exibe uma única tabuada, responsável por iterar sobre a variável ```m```. Se, agora, este laço estiver interno a outro laço, que por sua vez iterará sobre o valor da variável ```n```, podemos gerar várias tabuadas:
+
+```python
+maximo = int(input("Escolha o número máximo que queira exibir a tabuada: "))
+n = 1
+while n <= maximo:
+    m = 1
+    while m <= 10:
+        print(n, "x", m, "=", n*m)
+        m = m + 1
+    print("-----------")
+    n = n + 1
+#>Escolha o número máximo que queira exibir a tabuada: 2
+#>1 x 1 = 1
+#>1 x 2 = 2
+#>1 x 3 = 3
+#>1 x 4 = 4
+#>1 x 5 = 5
+#>1 x 6 = 6
+#>1 x 7 = 7
+#>1 x 8 = 8
+#>1 x 9 = 9
+#>1 x 10 = 10
+#>-----------
+#>2 x 1 = 2
+#>2 x 2 = 4
+#>2 x 3 = 6
+#>2 x 4 = 8
+#>2 x 5 = 10
+#>2 x 6 = 12
+#>2 x 7 = 14
+#>2 x 8 = 16
+#>2 x 9 = 18
+#>2 x 10 = 20
+-----------
+```
+
+### Laço infinito: erro ou objetivo
+
+Um erro muito comum, principalmente entre programadores iniciantes, é a implementação incorreta da condição do ```while``` ou do mecanismo de atualização da variável da condição. Tais equívocos podem levar o laço a nunca atingir sua condição de parada e o programa executaria as intruções do bloco infinitamente. Chamamos esse fenômemo de **laço infinito**.
+
+Entretanto, podemos ter laços infinitos propositais. Um programa que é interrompido de maneira arbitrária por um agente externo, por exemplo o usuário, não pode ter uma condição de parada explícita. e são escritos como ```while True:```. Veremos a seguir como abortar a execução de uma laço dessa natureza.
+
+### Interrompendo um laço infinito: break
+
+Python dispõe de um comando especial responsável por abortar (ou quebrar) a execução de uma repetição: ```break```. Se o laço atinge uma linha com essa palavra, ele é automaticamente encerrado e a execução do programa continua nas demais linhas depois da repetição.
+
+Por exemplo, veja um programa que exibe o dobro de todo número entrado pelo usuário, de maneira aparentemente infinita, mas que aborta caso o usuário entre com 0:
+
+```python
+print("Programa que multiplica por 2! Entre 0 para terminar.")
+while True:
+    n = int(input("número: "))
+    if n == 0:
+        break
+    print(n, "x 2 =", n*2)
+print("FIM")
+#>Programa que multiplica por 2! Entre 0 para terminar.
+#>número: 3
+#>3 x 2 = 6
+#>número: 1
+#>1 x 2 = 2
+#>número: 10
+#>10 x 2 = 20
+#>número: 5555
+#>5555 x 2 = 11110
+#>número: 23
+#>23 x 2 = 46
+#>número: 1
+#>1 x 2 = 2
+#>número: 0
+#>FIM
+```
