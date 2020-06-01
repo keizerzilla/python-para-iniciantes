@@ -32,6 +32,6 @@ O programa acaba quando o usuário digitar o código 0 (zero). Ao final, exiba o
 
 **5.11:** Escreva um programa que leia 10 números e exiba a quantidade de números pares e números ímpares lidos.
 
-**5.12:** Escreva um programa que calcula o fatorial de um número inteiro N lido do teclado. A função fatorial é escrita como N! e é definida com um conjunto de multiplicações decrescente do número N até 1. Exemplo: 5! = 5*4*3*2*1 = 120.
+**5.12:** Escreva um programa que calcula o fatorial de um número inteiro N lido do teclado. A função fatorial é escrita como N! e é definida com uma sequência de multiplicações decrescentes do número N até 1. Exemplo: 5! = 5*4*3*2*1 = 120.
 
 **5.13:** Os números primos possuem várias aplicações dentro da Computação, por exemplo na Criptografia. Um número primo é aquele que é divisível apenas por um e por ele mesmo. Faça um programa que peça um número inteiro e determine se ele é ou não um número primo.
