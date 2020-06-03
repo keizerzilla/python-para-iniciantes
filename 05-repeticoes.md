@@ -1,4 +1,4 @@
-## Parte 05: REPETIÇÕES
+## PARTE 05: REPETIÇÕES
 
 Na aula anterior, aprendemos a "fazer desvios" em nossos programas através de condições. Sabemos agora como executar ou não trechos específicos do código a partir de decisões tomadas com a ajuda das estruturas condicionais ```if```, ```else``` e ```elif```. Com elas, nossa capacidade de escrever programas mais sofisticados aumentou drasticamente.
 
