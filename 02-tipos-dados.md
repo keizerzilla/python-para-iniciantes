@@ -9,7 +9,7 @@ Podemos agrupar os tipos possíveis no Python em algumas categorias:
 | Numérico   | ```int```, ```float```, ```complex```          |
 | Texto      | ```str```                                      |
 | Lógico     | ```bool```                                     |
-| Sequência  | ```list```, ```tuple```, ```range```           |
+| Sequência  | ```list```, ```tuple```                        |
 | Mapeamento | ```dict```                                     |
 | Conjunto   | ```set```, ```frozenset```                     |
 | Binário    | ```bytes```, ```bytearray```, ```memoryview``` |
