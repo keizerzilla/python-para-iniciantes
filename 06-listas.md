@@ -27,6 +27,8 @@ C = ["queen", "the strokes", "rhapsody", "agnaldo timoteo"] # lista de strings
 D = [3.14, 7, "marx", "lenin", 0.99, 1] # lista misturada
 ```
 
+Assim como todos os outros tipos de dados que vimos até o momento, listas possuem uma função própria usada para conversões. Essa função também tem o mesmo nome do tipo de varíavel: ```list()```. Mais a frente veremos quais tipos de dados podem ser convertidos diretamente em listas.
+
 Listas são variáveis mutáveis, ou seja, elas podem mudar. Podemos adicionar e remover elementos, destruí-las por completo e reconstruí-las facilmente. Além dessa flexibilidade, listas são variáveis especiais chamadas de **objetos** e possuem funções especiais chamadas de **métodos**. Métodos são funções acessadas diretamente por objetos usando ponto ```.``` (detalhes mais a frente).
 
 Eu arriscaria dizer que listas são o que Python tem de mais poderoso. Outras linguagens de programação possuem seus próprios mecanismos para armazenar dados sequenciais, mas não com a mesma flexibilidade que as listas do Python.
@@ -328,6 +330,20 @@ cedulas = [50, 10, 10, 2, 5, 20, 100, 50]
 cedulas.sort(reverse=True)
 print(cedulas)
 #>[100, 50, 50, 20, 10, 10, 5, 2]
+
+# a ordenação de elementos string segue a sequência do alfabeto
+
+frutas = ["laranja", "banana", "melancia", "uva"]
+frutas.sort()
+print(frutas)
+#>['banana', 'laranja', 'melancia', 'uva']
+
+# ATENÇÃO: palavras iniciadas com maíusculas são ordenadas primeiro que minúsculas
+
+frutas = ["laranja", "Ameixa", "abobora", "banana", "melancia", "uva", "Uva"]
+frutas.sort()
+print(frutas)
+#>['Ameixa', 'Uva', 'abobora', 'banana', 'laranja', 'melancia', 'uva']
 ```
 
 ### Listas que não mudam: tuplas
@@ -357,6 +373,17 @@ print(y)
 #>3
 print(z)
 #>2
+```
+
+O contrário, ou seja, o empacotamento, também é possível. Intuitivamente, a sintaxe do empacotamento é a inversa do desempacotamento; podemos criar uma tupla a partir de um conjunto de variáveis:
+
+```python
+a = 10,
+b = 66
+c = 7
+t = a, b, c
+print(t)
+#>(10, 66, 7)
 ```
 
 ### Laço sequencial: ```for```
@@ -445,6 +472,17 @@ for v in range(2, 10, 2):
 #>8
 ```
 
+Podemos transformar um pseudo-lista gerada com ```range()``` é uma lista real usando a função ```list()```:
+
+```python
+r = range(0, 10)
+print(r)
+#>range(0, 10)
+L = list(r)
+print(L)
+#>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
 ### Rastreando índices: ```enumerate()```
 
 A função ```enumerate()``` é usada para termos acesso tanto aos **valores dos elementos** quanto aos **índices dos elementos** durante a execução de um laço ```for```. Ela também é geradora, assim como ```range()```, mas agora capaz de criar tuplas: o primeiro elemento será o índice do elemento atual e o segundo, o valor do elemento atual.
@@ -463,16 +501,31 @@ for i, e in enumerate(frutas):
 
 ### Lista de listas
 
-Python permite armazenar listas dentro de uma outra lista. O acesso de elementos de uma lista interna (ou "lista elemento") é feito usando múltiplos operadores colchete ```[]```. O primeiro índice localiza o elemento na posição da lista. Se esse elemento for uma lista, podemos acessar um valor desse a partir do segundo índice. O exemplo abaixo monta uma lista que guarda três outras listas, cada uma com três elementos. Primeiro, podemos imprimir as listas internas por completo, usando apenas um índice. Com o uso do segundo índice, podemos acessar elementos das listas internas.
+Como podemos misturar qualquer tipo de dado em uma mesma lista, Python permite armazenar listas dentro de uma outra lista. O acesso de elementos de uma lista interna (ou "lista elemento", ou "sub-lista") é feito usando múltiplos operadores colchete ```[]```. O primeiro índice localiza o elemento na posição da lista. Se esse elemento for uma lista, podemos acessar um valor desse a partir do segundo índice. O exemplo abaixo monta uma lista que guarda três outras listas, cada uma com três elementos. Primeiro, podemos imprimir as listas internas por completo, usando apenas um índice. Com o uso do segundo índice, podemos acessar elementos das listas internas:
 
 ```python
+# outra forma de inicializar listas de listas é espaçando as linhas assim:
+#
+# matriz = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+#
+# alguns argumentam que essa é mais organizada e legível
+# a escolha de estilo vai de programador para programador
+
 matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# ACESSANDO LISTAS INTERNAS POR COMPLETO
 print(matriz[0])
 #>[1, 2, 3]
 print(matriz[1])
 #>[4, 5, 6]
 print(matriz[2])
 #>[7, 8, 9]
+
+# ACESSANDO ELEMENTOS DAS LISTAS INTERNAS
 print(matriz[0][0])
 #>1
 print(matriz[1][2])
