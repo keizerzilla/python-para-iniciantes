@@ -512,7 +512,7 @@ for v in range(2, 10, 2):
 #>8
 ```
 
-Podemos transformar um pseudo-lista gerada com ```range()``` é uma lista real usando a função ```list()```:
+Podemos transformar um pseudo-lista gerada com ```range()``` em uma lista real usando a função ```list()```:
 
 ```python
 r = range(0, 10)
