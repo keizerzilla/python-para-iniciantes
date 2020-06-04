@@ -1,3 +1,4 @@
+
 ## PARTE 06: LISTAS
 
 Lista é um tipo de variável que permite guardar vários valores em sequência. Cada valor de uma lista é chamado **elemento** e a sua posição na lista, **índice**. Uma lista pode guardar nenhum ou vários elementos, de mesmo tipo ou de tipos diferentes (incluindo outras listas!). Chamamos de **tamanho** da lista a quantidade de valores que ela guarda. Seu tipo no python é o ```list```.
@@ -135,19 +136,6 @@ print(L[-3])
 #>2
 ```
 
-### Tamanho de uma lista: função ```len()```
-
-Podemos usar a função ```len()``` para retornar o tamanho de uma lista, ou seja, quantos elementos ela guarda:
-
-```python
-L = [6, 6, "artur", 2.3]
-print(len(L))
-#>4
-J = ["melancia", "ednaldo", "birina", "lenha", "uniao", "tranca"]
-print(len(J))
-#>6
-```
-
 ### Concatenação de listas: operador ```+```
 
 Podemos usar o operador ```+``` para "somar" duas listas. O termo mais correto para essa operação é concatenação:
@@ -189,6 +177,58 @@ print(2 in notas)
 #>False
 print(5 in notas)
 #>True
+```
+
+### Tamanho de uma lista: função ```len()```
+
+Como mencionamos na introdução dessa aula, chamamos de tamanho da lista o número de elementos que ela guarda. Podemos usar a função ```len()``` para retornar o tamanho de uma lista::
+
+```python
+L = [6, 6, "artur", 2.3]
+print(len(L))
+#>4
+J = ["melancia", "ednaldo", "birina", "lenha", "uniao", "tranca"]
+print(len(J))
+#>6
+```
+
+### Funções super práticas: ```min()```, ```max()```, ```sum()```
+
+No caso de listas que contem apenas valores números (inteiros ou ponto fluantes), temos à disposição 3 funções bastantes úteis: ```min()```, ```max()```, ```sum()```. Como os nomes sugerem, elas servem para retornar o menor valor de uma lista, o maior valor de uma lista e a soma de todos os valores da lista, respectivamente.
+
+```python
+L = [9, 2, 3, 10, 5, -4, 2, -8, -11, 58, 2]
+
+# min(): retorna o menor valor
+print(min(L))
+#>-11
+
+# max(): retorna o maior valor
+print(max(L))
+#>58
+
+# sum(): retorna a soma
+print(sum(L))
+#>68
+```
+
+As funções ```min()``` e ```max()``` podem ser usadas em listas de strings também. Seu funcionamento é o seguinte:
+- primeiro, a função ordena as strings em ordem alfabética em uma lista temporária (não altera a original!)
+- com base nessa lista ordenada, a função retornará o primeiro elemento (no caso de ```min()```) ou o último (no caso de ```max()```).
+
+Vejamos um exemplo:
+
+```python
+roupas = ["luvas", "jaqueta", "calça", "blusa", "cueca", "meias"]
+
+print(min(roupas))
+#>blusa
+print(max(roupas))
+#>meias
+print(roupas)
+#>['luvas', 'jaqueta', 'calça', 'blusa', 'cueca', 'meias']
+
+# note que a lista não se alterou!
 ```
 
 ### Métodos de lista
@@ -485,9 +525,9 @@ print(L)
 
 ### Rastreando índices: ```enumerate()```
 
-A função ```enumerate()``` é usada para termos acesso tanto aos **valores dos elementos** quanto aos **índices dos elementos** durante a execução de um laço ```for```. Ela também é geradora, assim como ```range()```, mas agora capaz de criar tuplas: o primeiro elemento será o índice do elemento atual e o segundo, o valor do elemento atual.
+A função ```enumerate()``` é usada quando queremos ter acesso, ao mesmo tempo, tanto aos **valores dos elementos** quanto aos **índices dos elementos** durante a execução de um laço ```for```. Ela também é geradora, assim como ```range()```, mas de tuplas: o primeiro valor será o índice do elemento atual e o segundo, o valor do elemento atual. Como o nome sugere, portanto, ela "enumera" os elementos de uma sequência.
 
-Você perceberá no exemplo abaixo que escrevemos o laço ```for``` como ```for i, e in enumerate(frutas)```; a parte ```i, e``` nada mais que a propriedade do desempacotamento sendo usada.
+Note que no exemplo abaixo escrevemos o início do laço como ```for i, e in enumerate(frutas)```; a parte ```i, e``` nada mais que a propriedade do desempacotamento de tuplas sendo usada.
 
 ```python
 frutas = ["laranja", "banana", "melancia", "uva"]
@@ -497,6 +537,34 @@ for i, e in enumerate(frutas):
 #>1 banana
 #>2 melancia
 #>3 uva
+```
+
+### Tuplas a partir de duas listas: a função ```zip()```
+
+A função ```zip()``` toma como argumento uma ou mais listas de mesmo tamanho. O retorno é uma sequência de tuplas aonde o primeiro valor vem do primeiro argumento e o segundo valor, do segundo. Seu uso é bem semelhante ao da função ```enumerate()```: quando usada num laço for, podemos desempacotar o retorno de ```zip()``` em duas variáveis e tratar os valores de duas listas mais 
+
+```python
+# zip de duas listas
+L = [4, 3, 1, 0]
+J = [5, 2, 3, 9]
+for l, j in zip(L, J):
+    print(l, j)
+#>4 5
+#>3 2
+#>1 3
+#>0 9
+
+# zip de três listas
+nome = ["artur", "hugo", "hamlet", "caio", "bruno"]
+idade = [28, 28, 60, 28, 29]
+cor = ["vermelho", "azul", "verde", "roxo", "amarelo"]
+for n, i, c in zip(nome, idade, cor):
+    print(n, i, c)
+#>artur 28 vermelho
+#>hugo 28 azul
+#>hamlet 60 verde
+#>caio 28 roxo
+#>bruno 29 amarelo
 ```
 
 ### Lista de listas
