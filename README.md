@@ -11,3 +11,7 @@ Conteúdo deste repositório:
 - Notas de aula
 - Exercícios de fixação
 - Desafios de programação
+
+### Fazer:
+
+- Avaliar organização em termos de "objetivos, conteúdo, critérios de avaliação e orientações didáticas"
