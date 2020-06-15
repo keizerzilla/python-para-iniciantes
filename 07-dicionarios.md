@@ -33,9 +33,13 @@ print(tabela["Couve"])
 #>1.50
 ```
 
-Um dicionário vazio seria escrito apenas como ```{}```, ou seja, com zero itens.
+Um dicionário vazio seria escrito apenas como ```{}```, ou seja, com zero itens:
 
-Podemos rescreever a mesma declaração acima de uma forma mais organizada e legível, posicionando cada item do dicionário numa linha separada:
+```python
+dic = {}
+```
+
+Podemos rescreever a declaração do dicionário ```tabela``` de uma forma mais organizada e legível, posicionando cada item do dicionário numa linha separada:
 
 ```python
 tabela = {
