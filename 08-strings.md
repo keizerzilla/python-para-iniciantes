@@ -73,6 +73,24 @@ print(poema)
 #>e não é de tudo
 ```
 
+### Percorrendo strings usando laço ```for```
+
+Assim como listas e dicionários, strings são tipos de dado sequência. Portanto, podemos percorrer seus elementos (no caso, caractéres) usando um laço ```for```. Cada elemento por iteração do laço será um caractére da string, do primeiro até o final.
+
+```python
+txt = "Bom dia."
+for c in txt:
+    print(c)
+#>B
+#>o
+#>m
+#> 
+#>d
+#>i
+#>a
+#>.
+```
+
 ### Métodos de strings
 
 A cada nova versão do Python, novos métodos de string são adicionados. Até o momento da criação desta aula, estavam disponíveis mais de 20 métodos. Focaremos a atenção em alguns que julgamos ser mais importantes e deixamos para a sua curiosidade pesquisar a documentação dos demais.
