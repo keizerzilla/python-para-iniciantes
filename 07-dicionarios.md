@@ -1,6 +1,6 @@
 ## PARTE 07: Dicionários
 
-Um dicionário é uma estrutura de dados composta por relações entre **chaves** e **valores**; usamos uma *chave* para acessar o seu respectivo *valor*. O conjunto chave mais valor é chamado de **item**.
+Dicionários, assim como listas, são dados do tipo sequência. Dicionários também podem guardar qualquer tipo de dados, mas esses são acessados de maneira diferente das listas. Ao invês de indíces numéricos, usamos chaves. Em outras palavras, um dicionário é uma estrutura de dados composta por relações entre **chaves** e **valores**; usamos uma *chave* para acessar o seu respectivo *valor*. O conjunto chave mais valor é chamado de **item**.
 
 Por exemplo, vejamos a tabela abaixo que traz os preços de um conjunto de hortaliças:
 
