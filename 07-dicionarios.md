@@ -1,4 +1,3 @@
-
 ## PARTE 07: Dicionários
 
 Um dicionário é uma estrutura de dados composta por relações entre **chaves** e **valores**; usamos uma *chave* para acessar o seu respectivo *valor*. O conjunto chave mais valor é chamado de **item**.
