@@ -52,8 +52,8 @@ tabela = {
 
 A inclusão de novos itens num dicionário é mais flexível que nas listas. Quando atribuímos um valor a uma chave, duas coisas podem acontecer:
 
-**1. Se a chave já existe, o valor atual é trocado pelo novo valor; ou**
-**2. Se a chave não existe, ela é criada com o valor passado.**
+1. Se a chave já existe, o valor atual é trocado pelo novo valor
+2. Se a chave não existe, ela é criada com o valor passado
 
 ```python
 tabela = {
