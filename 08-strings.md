@@ -1,6 +1,7 @@
+
 ## PARTE 08: Strings
 
-As strings são estruturas já comuns em nosso curso, mas até o momento foram usadas apenas como mensagens de apoio na interação entre usuário e programa; hoje veremos como manipulá-las de forma mais livre. Também conhecidas como "cadeias de caractéres", strings são sequências de caractéres delimitados por chaves duplas ```"``` ou simples ```'``` (escolha livre). Por serem um tipo de dado sequência, a maioria das manipulações possíveis com listas também são possíveis com strings.
+As strings são estruturas já comuns em nosso curso, mas até o momento foram usadas apenas como mensagens de apoio na interação entre usuário e programa; hoje veremos como manipulá-las de forma mais livre. Também conhecidas como "cadeias de caracteres", strings são sequências de caracteres delimitados por chaves duplas ```"``` ou simples ```'``` (escolha livre). Por serem um tipo de dado sequência, a maioria das manipulações possíveis com listas também são possíveis com strings.
 
 O exemplo a seguir condensa:
 
@@ -11,7 +12,7 @@ O exemplo a seguir condensa:
 - busca de substrings usando operador ```in```
 
 ```python
-# - podemos acessar caractéres individuais usando o operador de acesso []
+# - podemos acessar caracteres individuais usando o operador de acesso []
 # - a contagem segue a mesma lógica das listas: a partir do índice 0
 nome = "Artur Rodrigues Rocha Neto"
 print(nome[0])
@@ -25,7 +26,7 @@ print(nome[15]) # espaço em branco entre Rodriges e Rocha :)
 print(nome[3:16])
 #>tur Rodrigues R
 
-# - a função len() retorna o tamanho da string, ou seja, quantos caractéres ela possui
+# - a função len() retorna o tamanho da string, ou seja, quantos caracteres ela possui
 print(len(nome))
 #>26
 
@@ -45,7 +46,7 @@ print("artur" in nome) # note que strings são sensíveis à capitalização
 #> False
 ```
 
-A maior diferença entre listas e strings é que strings são imutáveis, ou seja, **não podemos mudar seus caractéres formadores depois que uma string é criada**:
+A maior diferença entre listas e strings é que strings são imutáveis, ou seja, **não podemos mudar seus caracteres formadores depois que uma string é criada**:
 
 ```python
 letras = "ABCDIF"
@@ -56,7 +57,7 @@ letras[4] = "E"
 
 ### Strings com múltiplas linhas
 
-Para manipular strings muito grandes, que se prolongam por mais de uma linha, delimitamos os caractéres não com duas mas com três aspas duplas (ou simples):
+Para manipular strings muito grandes, que se prolongam por mais de uma linha, delimitamos os caracteres não com duas mas com três aspas duplas (ou simples):
 
 ```python
 poema = """vale nada
@@ -75,7 +76,7 @@ print(poema)
 
 ### Percorrendo strings usando laço ```for```
 
-Assim como listas e dicionários, strings são tipos de dado sequência. Portanto, podemos percorrer seus elementos (no caso, caractéres) usando um laço ```for```. Cada elemento por iteração do laço será um caractére da string, do primeiro até o final.
+Assim como listas e dicionários, strings são tipos de dado sequência. Portanto, podemos percorrer seus elementos (no caso, caracteres) usando um laço ```for```. Cada elemento por iteração do laço será um caractere da string, do primeiro até o final.
 
 ```python
 txt = "Bom dia."
@@ -100,7 +101,7 @@ A cada nova versão do Python, novos métodos de string são adicionados. Até o
 - ```.strip()```: remove espaços em branco no início e fim da string
 - ```.lower()```: retorna string apenas com letras minúsculas
 - ```.upper()```: retorna string apenas com letras maiúsculas
-- ```.capitalize()```: converte o primeiro caractére em maiúscula
+- ```.capitalize()```: converte o primeiro caractere em maiúscula
 - ```.title()```: converte a primeira letra de cada palavra em maiúscula
 - ```.swapcase()```: inverte a capitalização; maiúscula se torna minúscula e vice-versa
 - ```.center()```: retorna uma string centralizada
@@ -140,7 +141,7 @@ print(txt.upper())
 #>MENSAGEM DE PERIGO
 ```
 
-**```.capitalize()```: converte o primeiro caractére em maiúscula**
+**```.capitalize()```: converte o primeiro caractere em maiúscula**
 
 ```python
 txt = "olá e bem-vindo!"
@@ -173,7 +174,7 @@ txt = "banana"
 print(txt.center(20))
 #>       banana       
 
-# com dois parâmetros: primeiro o tamanho, segundo o caractére de espaçamento
+# com dois parâmetros: primeiro o tamanho, segundo o caractere de espaçamento
 print(txt.center(20, "-"))
 #>-------banana-------
 print(txt.center(20, "="))
