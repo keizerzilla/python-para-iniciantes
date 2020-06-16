@@ -113,8 +113,6 @@ A cada nova versão do Python, novos métodos de string são adicionados. Até o
 - ```.split()```: divide a string em substrings sempre que encontra a string de seperação argumento
 - ```.format()```: converte e posiciona valores automaticamente em uma string
 
-#### Exemplos de uso dos métodos de string
-
 **```.strip()```: remove espaços em branco no início e fim da string**
 
 ```python
