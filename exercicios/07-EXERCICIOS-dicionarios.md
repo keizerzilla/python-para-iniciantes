@@ -15,8 +15,8 @@ contatos = {
     "Marcos" : "marcos_bezzera@bol.com.br",
     "Maria" : "marysilva_@google.com",
     "Carol" : "mckarol2@yahoo.com.br",
-    "Pedro" : "petterpotter@altavista.com"
-    "Jefferson" : "jeff77@msn.com",
+    "Pedro" : "petterpotter@altavista.com",
+    "Jefferson" : "jeff77@msn.com"
 }
 ```
 
