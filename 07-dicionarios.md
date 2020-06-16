@@ -144,8 +144,6 @@ print(len(tabela))
 - ```.update()```: adiciona um novo item ao dicionário
 - ```.items()```: gera pseudo-tuplas; primeiro elemento é a chave e segundo elemento, o valor
 
-#### Exemplos de uso dos métodos de dicionários
-
 **```.keys()```: retorna uma lista com todas as chaves**
 **```.values()```: retorna uma lista com todos os valores**
 
