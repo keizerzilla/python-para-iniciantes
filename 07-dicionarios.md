@@ -144,8 +144,8 @@ print(len(tabela))
 - ```.update()```: adiciona um novo item ao dicionário
 - ```.items()```: gera pseudo-tuplas; primeiro elemento é a chave e segundo elemento, o valor
 
-**```.keys()```: retorna uma lista com todas as chaves**
-**```.values()```: retorna uma lista com todos os valores**
+#### ```.keys()```: retorna uma lista com todas as chaves
+#### ```.values()```: retorna uma lista com todos os valores
 
 ```python
 tabela = {
@@ -173,7 +173,7 @@ print(valores)
 #[0.45, 1.2, 2.3, 1.5]
 ```
 
-**```.copy()```: cria uma cópia do dicionário**
+#### ```.copy()```: cria uma cópia do dicionário
 
 ```python
 tabela = {
@@ -191,7 +191,7 @@ print(tabela2["Uno"])
 #>1
 ```
 
-**```.clear```: limpa o dicionário (apaga todos os itens)**
+#### ```.clear```: limpa o dicionário (apaga todos os itens)
 
 ```python
 tabela = {
@@ -206,7 +206,7 @@ print(tabela)
 #>{}
 ```
 
-**```.update()```: adiciona um novo item ao dicionário**
+#### ```.update()```: adiciona um novo item ao dicionário
 
 ```python
 carro = {
@@ -221,7 +221,7 @@ print(carro)
 #>{"marca" : "Gurgel", "modelo" : "BR-800", "ano" : 1988, "cor" : "Cinza"}
 ```
 
-**```.items()```: gera pseudo-tuplas; primeiro elemento é a chave e segundo elemento, o valor**
+#### ```.items()```: gera pseudo-tuplas; primeiro elemento é a chave e segundo elemento, o valor
 
 ```python
 agenda = {
