@@ -249,8 +249,6 @@ As listas do Python possuem 11 métodos:
 - ```.reverse()```: inverte a ordem dos elementos da lista
 - ```.sort()```: ordena a lista de forma crescente ou descrescente
 
-### Exemplos de uso dos métodos de lista
-
 #### ```.append()```: adiciona um elemento ao final da lista
 
 ```python
