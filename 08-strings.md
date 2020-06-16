@@ -113,7 +113,7 @@ A cada nova versão do Python, novos métodos de string são adicionados. Até o
 - ```.split()```: divide a string em substrings sempre que encontra a string de seperação argumento
 - ```.format()```: converte e posiciona valores automaticamente em uma string
 
-**```.strip()```: remove espaços em branco no início e fim da string**
+#### ```.strip()```: remove espaços em branco no início e fim da string
 
 ```python
 txt = "  Hello, World!   "
@@ -123,7 +123,7 @@ print(txt.strip())
 #>Hello, World!
 ```
 
-**```.lower()```: retorna string apenas com letras minúsculas**
+#### ```.lower()```: retorna string apenas com letras minúsculas
 
 ```python
 txt = "AVISO IMPORTANTE"
@@ -131,7 +131,7 @@ print(txt.lower())
 #>aviso importante
 ```
 
-**```.upper()```: retorna string apenas com letras maiúsculas**
+#### ```.upper()```: retorna string apenas com letras maiúsculas
 
 ```python
 txt = "mesangem de perigo"
@@ -139,7 +139,7 @@ print(txt.upper())
 #>MENSAGEM DE PERIGO
 ```
 
-**```.capitalize()```: converte o primeiro caractere em maiúscula**
+#### ```.capitalize()```: converte o primeiro caractere em maiúscula
 
 ```python
 txt = "olá e bem-vindo!"
@@ -147,7 +147,7 @@ print(txt.capitalize())
 #>Olá e bem-vindo!
 ```
 
-**```.title()```: converte a primeira letra de cada palavra em maiúscula**
+#### ```.title()```: converte a primeira letra de cada palavra em maiúscula
 
 ```python
 txt = "trabalho de conclusão de curso"
@@ -155,7 +155,7 @@ print(txt.title())
 #>Trabalho De Conclusão De Curso
 ```
 
-**```.swapcase()```: inverte a capitalização; maiúscula se torna minúscula e vice-versa**
+#### ```.swapcase()```: inverte a capitalização; maiúscula se torna minúscula e vice-versa
 
 ```python
 txt = "eItA qUe BeLeZa"
@@ -163,7 +163,7 @@ print(txt.swapcase())
 #>EiTa QuE bElEzA
 ```
 
-**```.center()```: retorna uma string centralizada**
+#### ```.center()```: retorna uma string centralizada
 
 ```python
 txt = "banana"
@@ -181,7 +181,7 @@ print(txt.center(20, "+"))
 #>+++++++banana+++++++
 ```
 
-**```.count()```: retorna o número de vezes que uma substring aparece dentro de uma string**
+#### ```.count()```: retorna o número de vezes que uma substring aparece dentro de uma string
 
 ```python
 txt = "Eu amo pêra, pêras são minhas frutas favoritas"
@@ -189,7 +189,7 @@ print(txt.count("pêra"))
 #>2
 ```
 
-**```.endswith()```: retorna ```True``` se a string termina com a substring passada, ```False``` caso contrário**
+#### ```.endswith()```: retorna ```True``` se a string termina com a substring passada, ```False``` caso contrário
 
 ```python
 txt = "meu_arquivo.doc"
@@ -199,7 +199,7 @@ print(txt.endswith(".xls"))
 #>False
 ```
 
-**```.beginswith()```:  retorna ```True``` se a string começa com a substring passada, ```False``` caso contrário**
+#### ```.beginswith()```:  retorna ```True``` se a string começa com a substring passada, ```False``` caso contrário
 
 ```python
 txt = "cmd: atacar"
@@ -209,7 +209,7 @@ print(txt.beginswith("act: "))
 #>False
 ```
 
-**```.find()```: procura uma substring dentro de uma string e retorna a posição da primeira ocorrência**
+#### ```.find()```: procura uma substring dentro de uma string e retorna a posição da primeira ocorrência
 
 ```python
 txt = "Olá, meu nome é Artur"
@@ -217,7 +217,7 @@ print(txt.find("Artur"))
 #>16
 ```
 
-**```.replace()```: troca uma substring por outra substring**
+#### ```.replace()```: troca uma substring por outra substring
 
 ```python
 txt = "Olá, meu nome é Artur"
@@ -230,7 +230,7 @@ print(txt.replace("atacar", "usar"))
 #>cmd: usar | cmd: mover | cmd: usar | cmd: usar | cmd: mover
 ```
 
-**```.split()```: divide a string em substrings sempre que encontra a string de seperação argumento**
+#### ```.split()```: divide a string em substrings sempre que encontra a string de seperação argumento
 
 ```python
 # .split() retorna uma lista
@@ -244,7 +244,7 @@ print(txt.split(" | "))
 ["cmd: atacar", "cmd: mover", "cmd: usar", "cmd: atacar", "cmd: mover"]
 ```
 
-**```.format()```: converte e posiciona valores automaticamente em uma string**
+#### ```.format()```: converte e posiciona valores automaticamente em uma string
 
 ```python
 # .format() posiciona os múltiplos argumentos em sequência nos locais da string que
