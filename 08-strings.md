@@ -199,13 +199,13 @@ print(txt.endswith(".xls"))
 #>False
 ```
 
-#### ```.beginswith()```:  retorna ```True``` se a string começa com a substring passada, ```False``` caso contrário
+#### ```.startswith()```:  retorna ```True``` se a string começa com a substring passada, ```False``` caso contrário
 
 ```python
 txt = "cmd: atacar"
-print(txt.beginswith("cmd: "))
+print(txt.startswith("cmd: "))
 #>True
-print(txt.beginswith("act: "))
+print(txt.startswith("act: "))
 #>False
 ```
 
