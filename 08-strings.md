@@ -55,6 +55,20 @@ letras[4] = "E"
 #>TypeError: 'str' object does not support item assignment
 ```
 
+### Comparando strings
+
+Usando o operador de comparação ```==``` assim como na comparação de números. A operação retornará ```True``` se todos os caractéres das duas strings testadas forem exatamente iguais e nas respectivas posições, e ```False``` caso contrário:
+
+```python
+txt1 = "jeremirio"
+txt2 = "jeremirio"
+txt3 = "hugo"
+txt1 == txt2
+#>True
+txt1 == txt3
+#>False
+```
+
 ### Strings com múltiplas linhas
 
 Para manipular strings muito grandes, que se prolongam por mais de uma linha, delimitamos os caracteres não com duas mas com três aspas duplas (ou simples):
