@@ -1,4 +1,4 @@
-## Python para Iniciantes
+## 🐍 Python para Iniciantes
 **Professor:** Artur Rodrigues Rocha Neto
 
 **Modalidade:** À distância
