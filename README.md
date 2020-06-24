@@ -15,3 +15,7 @@ Conteúdo deste repositório:
 ### Fazer:
 
 - Avaliar organização em termos de "objetivos, conteúdo, critérios de avaliação e orientações didáticas"
+- Texto "sobre o pensamento do programador"
+- Lista de funções já acessíveis (como print)
+- Texto "o que é um computador" (acessível)
+- Texto "o que é uma linguagem de programação" (acessível)
