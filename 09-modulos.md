@@ -141,35 +141,342 @@ Dentre as dezenas de módulos da biblioteca padrão do Python, mencionaremos ape
 
 Os módulos escolhidos foram ```math```, ```random```, ```sys```, ```textwrap```, ```time``` e ```os```. A Figura abaixo mostra, em diagrama de blocos como no primeiro exemplo da aula, as funções e constantes que abordaremos de cada módulo.
 
-![Alguns módulos padrão do Python e algumas de suas funcionalidades.](https://i.imgur.com/t0NfRFk.png)
-### ```math```: pacote matemático
+![Alguns módulos padrão do Python e algumas de suas funcionalidades.](https://i.imgur.com/mHxV3Wt.png)
+#### ```math```: pacote matemático
 
 ```python
+import math
+
+# ------------------------
+#         FUNÇÕES
+# ------------------------
+
+# math.ceil(x)
+# - arrendonda o número 'x' para o primeiro inteiro maior ou igual a 'x'
+# - em outras palavras, arredonda para cima
+valor = 7.77
+arredondado_cima = math.ceil(valor)
+print(arredondado_cima)
+#>8
+
+# math.floor(x)
+# - arrendonda o número 'x' para o primeiro inteiro menor ou igual a 'x'
+# - em outras palavras, arredonda para baixo
+valor = 11.33
+arredondado_baixo = math.floor(valor)
+print(arredondado_baixo)
+#>11
+
+# math.factorial(x)
+# - retorna o fatorial do número 'x', que deve ser estritamente positivo
+numero = 5
+fatorial = math.factorial(numero)
+print(fatorial)
+#>120
+
+# math.srqt(c)
+# - retorna a raíz quadrada do número 'x'
+numero = 36
+raiz = math.sqrt(numero)
+print(raiz)
+#>6
+
+# math.degrees(x)
+# - converte o número 'x' em radianos para graus
+angulo1 = 3.14
+angulo_graus = math.degrees(angulo1)
+print(angulo_graus)
+#>179.9087476710785
+
+# math.radians(x)
+# - converte o número 'x' em graus para radianos
+angulo2 = 45
+angulo_radianos = math.radians(angulo2)
+print(angulo_radianos)
+#>0.7853981633974483
+
+# math.sin(x)
+# - calcula o seno do ângulo 'x' (deve ser passado em radianos)
+angulo3 = 5.66
+seno = math.sin(angulo3)
+print(seno)
+#>-0.5836246614030073
+
+# math.cos(x)
+# - calcula o cosseno do ângulo 'x' (deve ser passado em radianos)
+angulo4 = 0.666
+cosseno = math.cos(angulo4)
+print(cosseno)
+#>0.786299332640184
+
+# math.tan(x)
+# - calcula a tangente do ângulo 'x' (deve ser passado em radianos)
+angulo5 = 1.11
+tangente = math.tan(angulo5)
+print(tangente)
+#>2.014338214476828
+
+# ------------------------
+#        CONSTANTES
+# ------------------------
+
+# math.pi
+# - o Número Pi até a 15ª casa decimal
+print(math.pi)
+#>3.141592653589793
+
+# math.e
+# - o Número de Euler até a 15ª casa decimal
+print(math.e)
+#>2.718281828459045
+
+# math.inf
+# - o maior número possível de ser guardado em um valor inteiro na memória
+print(math.inf)
+#>inf
 ```
 
-### ```random```: manipulação de números pseudo-aleatórios
+#### ```random```: manipulação de números pseudo-aleatórios
 
 ```python
+import random
+
+# ------------------------
+#         FUNÇÕES
+# ------------------------
+
+# random.randint(a, b)
+# - retorna um número inteiro aleatório uniformente escolhido entre'a' e 'b'
+num = random.randint(1, 10)
+print(num)
+#>8
+num = random.randint(1, 10)
+print(num)
+#>10
+
+# random.uniform(a, b)
+# - retorna um número ponto-flutuante uniformement escolhido entre 'a' e 'b'
+num2 = random.uniform(0, 5)
+print(num2)
+#>0.4732719074389541
+num2 = random.uniform(0, 5)
+print(num2)
+#>2.2612863496330995
+
+# random.choice(seq)
+# - retorna um elemento escolhido aleatoriamente dentro da lista 'seq'
+nomes = ["ednaldo", "birina", "fegue", "lenha"]
+escolhido = random.choice(nomes)
+print(escolhido)
+#>birina
+nomes = ["ednaldo", "birina", "fegue", "lenha"]
+escolhido = random.choice(nomes)
+print(escolhido)
+#>lenha
+
+# random.shuffle(seq)
+# - embaralha os elementos da lista 'seq'
+nomes = ["artur", "rodrigues", "rocha", "neto"]
+print(nomes)
+#>nomes = ["artur", "rodrigues", "rocha", "neto"]
+random.shuffle(nomes)
+print(nomes)
+#>['rocha', 'rodrigues', 'neto', 'artur']
+
+# random.sample(seq, k)
+# - retorna uma lista com 'k' elementos escolhidos aleatoriamente em 'seq'
+valores = [66, -2, 11, 5, 984, 0]
+amostras = random.sample(valores, 3)
+print(amostras)
+#>[0, 5, 66]
+amostras = random.sample(valores, 3)
+print(amostras)
+#>[984, 0, 11]
 ```
 
-### ```sys```: interface com o interpretador Python
+#### ```sys```: interface com o interpretador Python
 
 ```python
+import sys
+
+# ------------------------
+#         FUNÇÕES
+# ------------------------
+
+# sys.exit()
+# - desliga o interpretador e aborta imediatamente o programa
+sys.exit()
+# o programa morre aqui /\
+
+# ------------------------
+#        CONSTANTES
+# ------------------------
+
+# sys.argv
+# - uma lista com valores passados na execução do programa via linha de comando
+# - um programa em python pode ser executado com "python nome_programa.py" em um terminal
+# - é possível passar valores, chamados argumentos, depois do nome do programa
+# - o nome do programa sempre é o primeiro argumento
+# - exemplo: "python nome_programa.py 12 ednaldo 24" possui 4 argumentos:
+# - ["nome_programa.py", 12, "ednaldo", 24]
+# - esses argumentos ficam salvos na constante sys.argv
+# - imagine que você executou o programa exemplo.py e passou os argumentos 77 e artur:
+print(sys.argv)
+#> ["exemplo.py", 77, "artur"]
+
+# sys.platform
+# - retorna o código da plataforma aonde o interpretador está sendo executado
+print(sys.platform)
+#>win32
+
+# sys.version
+# - retorna a versão do interpretador em uso
+print(sys.version)
+#>3.7.7 (tags/v3.7.7:d7c567b08f, Mar 10 2020, 09:44:33) [MSC v.1900 32 bit (Intel)]
 ```
 
-### ```textwrap```: formatação de grandes strings
+#### ```textwrap```: formatação de grandes strings
 
 ```python
+import textwrap
+
+# ------------------------
+#         FUNÇÕES
+# ------------------------
+
+# textwrap.wrap(text, width=70)
+# - fatia a string 'text' em pedaços (linhas) com no máximo 'width' caractéres
+# - essa função toma cuidado de não dividir palavras em duas
+# - o valor padrão de 'width', se não for especificado, é 70
+mensagem = "Quando a indústria prospera, os patrões obtêm grandes lucros e não pensam em repartir com os operários. Mas durante a crise, os patrões tratam de despejar sobre os ombros dos operários os prejuízos."
+linhas = textwrap.wrap(mensagem, 20)
+for linha in linhas:
+    print(linha)
+#>Quando a indústria
+#>prospera, os patrões
+#>obtêm grandes lucros
+#>e não pensam em
+#>repartir com os
+#>operários. Mas
+#>durante a crise, os
+#>patrões tratam de
+#>despejar sobre os
+#>ombros dos operários
+#>os prejuízos.
+
+# textwrap.shorten(text, width)
+# - compacta a string 'text' até no máximo 'width' caractéres
+# - caso 'text' seja maior que 'width', posiciona-se reticências ao final
+aviso = "CUIDADO! Esta zona está em construção. Uso de material de proteção é obrigatório!"
+aviso_curto = textwrap.shorten(aviso, 40)
+print(aviso_curto)
+#>CUIDADO! Esta zona está em [...]
 ```
 
-### ```time```: controle de tempo
+#### ```time```: controle de tempo
 
 ```python
+import time
+
+# ------------------------
+#         FUNÇÕES
+# ------------------------
+
+# time.sleep(secs)
+# - pausa execução do programa por 'secs' segundos
+# - no exemplo abaixo, o segundo print será executado 5 segundos depois do primeiro
+print("Vou dormir...")
+time.sleep(5)
+print("Acordei!")
+#>Vou dormir...
+#>Acordei!
+
+# time.time()
+# - retorna a quantidade de segundos (fracionado) desde 1 de janeiro de 1970
+# - muito usada para contar tempo entre um ponto e outro de um programa
+t1 = time.time()
+print(t1)
+#>1593028886.0703971
 ```
 
-### ```os```: comunicação com sistema de arquivos
+#### ```os```: comunicação com sistema de arquivos
 
 ```python
+import os
+
+# ------------------------
+#         FUNÇÕES
+# ------------------------
+
+# os.getcwd()
+# - retorna o diretório de onde está sendo executado o interpretador
+# - experimente e veja o resultado na sua máquina
+diretorio = os.getcwd()
+print(diretorio)
+#>C:\\Users\\tutu\\Desktop\\curso_python
+
+# os.listdir(path=".")
+# - retorna uma lista com os nomes do conteúdo (arquivos e pastas) do diretório 'path'
+# - se 'path' não for definido, assume-se ".", o que é mesmo que "diretório atual"
+arquivos = os.listdir("C:\\Users\\tutu\\Desktop\\exemplo_pasta")
+print(arquivos)
+#>['database.txt', 'localconfig.txt', 'organizao-pedagogico-1.pdf', 'server-icon.png']
+
+# os.mkdir(path)
+# - cria uma pasta no caminho especificado por 'path'
+os.mkdir("C:\\Users\\tutu\\Desktop\\nova_pasta_python")
+
+# os.remove(path)
+# - apaga o arquivo localizado em 'path'
+os.remove("C:\\Users\\tutu\\Desktop\\exemplo_pasta\\database.txt")
+
+# os.rmdir(path)
+# - apaga a pasta localizada em 'path' e todo seu conteúdo
+os.rmdir("C:\\Users\\tutu\\Desktop\\nova_pasta_python")
 ```
 
+### Instalando pacotes da internet: o programa ```pip```
 
+Quando instalamos o Python em nosso computador, ele inclui um programa separado que se comunica com o Gerenciador de Pacotes Python, um repositório na internet de módulos (também chamados de pacotes) criados por programadores ao redor do mundo. Esse programa se chama ```pip```.
+
+Para usar o ```pip```, primeiro abra um terminal e navegue até o diretório de instalação do Python. Em muitas instalações do interpretador você não precisa navegar até o diretório, pois ele já trata de expor os programas ao caminho global do sistema, podendo portanto acessá-los de qualquer pasta. De um jeito ou de outro, você pode instalar um pacote rodando:
+
+```
+pip install <nome_do_pacote>
+```
+
+Para desinstalar um pacote, abra um terminal e faça:
+
+```
+pip uninstall <nome_do_pacote>
+```
+
+Para mostrar todos os pacotes já instalados, use:
+
+```
+pip list
+```
+
+Algumas instalações do Python fazem distinção entre os pacotes da versão 2 e da versão 3 da linguagem. Caso você não encontre o programa com nome ```pip```, ele pode estar instalado como ```pip3```. O uso é exatamente o mesmo.
+
+#### Exemplo: instalando o pacote ```mouse```
+
+Como demontração, vamos instalar o pacote ```mouse```, que permite automatizar movimento, cliques e outras manipulações com o ponteiro do mouse do computador. Abra o terminal, navegue até o diretório aonde o ```pip``` está instalado (se necessário) e execute:
+
+```
+pip install mouse
+```
+
+Agora, vamos escrever um programa de exemplo que move o mouse sozinho o ponteiro até a posição (700, 700) da tela. Vamos usar o modulo ```time``` para criar um pequeno suspense (:
+
+```python
+import mouse # o pacote que acabamos de instalar! agora ele está disponível para nós!
+import time
+
+print("Eu vou mexer seu mouse sozinho")
+print("Solte ele agora para ver, eu espero...")
+time.sleep(3)
+print("Começando!")
+mouse.move(700, 700, duration=2)
+print("Viu? (:")
+```
