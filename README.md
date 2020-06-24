@@ -7,7 +7,8 @@
 
 **Agradecimentos:** Bruno, Caio, Hamlet e Hugo por serem a melhor turma cobaia de todas!
 
-Conteúdo deste repositório:
+### Conteúdo deste repositório:
+
 - Notas de aula
 - Exercícios de fixação
 - Desafios de programação
