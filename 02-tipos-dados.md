@@ -1,4 +1,4 @@
-## PARTE 02: TIPOS DE DADOS
+## AULA 02: TIPOS DE DADOS
 
 Vimos que variáveis são compartimentos da memória que armazenam dados. Nos exemplos mostrados já foi possível ter uma noção dos **tipos de dados** possíveis que podemos armazenar. Agora vamos formalizar os tipos de dados possíveis em Python. Outras linguagens de programação podem apresentar mais ou menos possibilidades de tipos possíveis.
 
