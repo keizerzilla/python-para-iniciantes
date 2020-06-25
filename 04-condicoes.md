@@ -1,4 +1,4 @@
-## PARTE 4: CONDIÇÕES
+## AULA 04: CONDIÇÕES
 
 Os seus programas até agora foram todos "lineares". A sequência de execução das operações (linhas) dos seus programas seguiu sempre uma mesma direção, da linha mais ao topo até a última mais embaixo. Entretanto, é possível que seu programa faça "curvas" ou "desvios" ao longo das linhas. Ou seja, o seu programa pode tomar **decisões** se vai ou não executar certas linhas. O que vai permitir esse novo tipo de comportamento no seu programa são as **condições** (ou **condicionais**).
 
