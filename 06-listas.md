@@ -1,5 +1,5 @@
 
-## PARTE 06: LISTAS
+## AULA 06: LISTAS
 
 Lista é um tipo de variável que permite guardar vários valores em sequência. Cada valor de uma lista é chamado **elemento** e a sua posição na lista, **índice**. Uma lista pode guardar nenhum ou vários elementos, de mesmo tipo ou de tipos diferentes (incluindo outras listas!). Chamamos de **tamanho** da lista a quantidade de valores que ela guarda. Seu tipo no python é o ```list```.
 
