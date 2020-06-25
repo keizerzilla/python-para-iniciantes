@@ -1,4 +1,4 @@
-## PARTE 03: OPERADORES
+## AULA 03: OPERADORES
 
 Um operador é um símbolo que manipula valores e variáveis. Podemos agrupar os operadores de acordo com a categoria de tipo que eles manipulam:
 
