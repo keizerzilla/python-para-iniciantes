@@ -1,5 +1,5 @@
 
-## PARTE 08: Strings
+## AULA 08: Strings
 
 As strings são estruturas já comuns em nosso curso, mas até o momento foram usadas apenas como mensagens de apoio na interação entre usuário e programa; hoje veremos como manipulá-las de forma mais livre. Também conhecidas como "cadeias de caracteres", strings são sequências de caracteres delimitados por chaves duplas ```"``` ou simples ```'``` (escolha livre). Por serem um tipo de dado sequência, a maioria das manipulações possíveis com listas também são possíveis com strings.
 
