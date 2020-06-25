@@ -1,4 +1,4 @@
-## PARTE 01: VARIÁVEIS, PRINT() E INPUT()
+## AULA 01: VARIÁVEIS, PRINT() E INPUT()
 
 Os três aspectos mais comuns de um programa de computador, seja qual for a linguagem em que ele foi escrito, são:
 
