@@ -174,7 +174,7 @@ fatorial = math.factorial(numero)
 print(fatorial)
 #>120
 
-# math.srqt(c)
+# math.srqt(x)
 # - retorna a raíz quadrada do número 'x'
 numero = 36
 raiz = math.sqrt(numero)
