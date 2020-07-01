@@ -20,11 +20,13 @@ def soma(a, b):
     return c
 ```
 
-Primeiro, damos um nome à nossa função. Depois, passamos a lista de parâmetros entre parênteses, separados entre si por vírgula. Terceiro, fechamos essa primeira linha com o dois-pontos ```:```. Escrevemos nas linhas seguintes o bloco de código da função. Assim como os outros blocos de código que já vimos, como o do ```if``` e o do ```while```, é a identação que define quando o bloco começa e termina. Portanto, é a identação que diz quando a função começa e termina.
+Primeiro, damos um nome à nossa função. Depois, passamos a lista de parâmetros entre parênteses, separados entre si por vírgula. Terceiro, fechamos essa primeira linha com o dois-pontos ```:```. Essa linha que definie o nome e os parâmetros da função é chamada de **assinatura**.
+
+Escrevemos nas linhas seguintes o bloco de código da função. Assim como os outros blocos de código que já vimos, como o do ```if``` e o do ```while```, é a identação que define quando o bloco começa e termina. Portanto, é a identação que diz quando a função começa e termina. No caso da função ```soma()```, o bloco de código possui apenas duas linhas, mas poderia ter apenas uma como várias.
 
 ### Chamando uma função
 
-A chamada de uma função que foi criada por nós segue a mesma sintaxe das funções já existentes no Python: o nome da função seguido de parênteses com os possíveis parâmetros:
+A chamada de uma função que foi criada por nós segue a mesma sintaxe das funções já existentes no Python: o nome da função seguido de parênteses com os possíveis parâmetros na ordem que foram definidos:
 
 ```python
 def soma(a, b):
@@ -38,7 +40,7 @@ print(resultado)
 
 Como ```soma()``` é uma função que retorna valores, podemos armazenar seu resultado em uma variável
 
-### Funções que não retornam valores: a palavra ```None```
+### Funções que não retornam resultados: a palavra ```None```
 
 Como vimos na introdução visual, podemos ter qualquer combinação entre entradas e saídas, inclusive funções que não tem saídas. Imagine a função abaixo que diz "Oi" para uma pessoa:
 
@@ -52,7 +54,7 @@ saudacao("Samuel")
 #>Olá, Samuel!
 ```
 
-Se por um acaso tentarmos guardar o retorno dessa função em uma varíavel, o que acontece?
+Perceba que a função ```saudacao()``` não faz uso da instrução ```return```, ou seja, não tem retorno explícito. Se por um acaso tentarmos guardar o retorno dessa função em uma varíavel, o que acontece?
 
 ```python
 def saudacao(nome):
@@ -106,7 +108,7 @@ Veremos a seguir outras maneiras de definir a quantidade de argumentos.
 
 ### Número variado de parâmetros
 
-Você já deve ter se perguntado por quê podemos passar quantos parâmetros quisermos para a função ```print()``` e ela funciona perfeitamente bem em todos os casos. Esse comportamento é possível porque Python possui uma sintaxe que permite passarmos um número variável de parâmetros. Para isso, defina uma função com apenas um parâmetro e posicione um ```*``` antes do nome dele. Assim, Python enxergará esse parâmetro como uma tupla de valores e, portanto, podemos acessar sequencialmente usando o operador de acesso ```[]``` ou de forma iterativa com um laço ```for```. Exemplo:
+Você já deve ter se perguntado por quê podemos passar quantos parâmetros quisermos para a função ```print()``` e ela funciona perfeitamente bem em todos os casos. Esse comportamento é possível porque Python possui uma sintaxe que permite passarmos um número variável de parâmetros. Para isso, defina uma função com apenas um parâmetro e posicione um ```*``` antes do nome dele. Assim, Python enxergará esse parâmetro como uma tupla de valores e, portanto, podemos acessar sequencialmente usando o operador de acesso ```[]``` ou de forma iterativa com um laço ```for```. Exemplos:
 
 ```python
 def exemplo_acesso(*parametros):
@@ -150,4 +152,104 @@ res3 = multi_soma()
 #>0
 res4 = multi_soma(4)
 #>4
+```
+
+### Chaveando argumentos
+
+Vimos que, por definição, chamamos uma função passando os parâmetros na ordem que estes foram definidos. Entretanto, Python permite que a ordem dos parâmetros seja embaralhada na chamada da função. Para isso, basta passarmos os valores dos parâmetros usando explicitamente os nomes dos respectivos parâmetros numa sintaxe ```nome=valor```:
+
+```python
+def filhos(filho1, filho2, filho3):
+    print("O filho mais novo é {}".format(filho3))
+
+filhos("joão", "augusto", "matheus")
+#>O filho mais novo é matheus
+filhos(filho3="matheus", filho1="joão", filho2="augusto")
+#>O filho mais novo é matheus
+
+# Mesmo resultado em ambos os casos seja passando em ordem ou usando nome=valor
+```
+
+O uso da sintaxe ```nome=valor``` é mais comum quando tratamos de parâmetros com valor pré-definido, o próximo tópico que veremos.
+
+### Parâmetros com valores pré-definidos
+
+Valores pré-definidos ou valores padrão, como os nomes já sugerem, são maneiras de garantir que alguns parâmetros tenham valores passados para a função em casos quando não escolhemos esses valores explicitamente. Para definir um valor padrão, usamos a sintaxe ```nome=valor``` na definição da função; caso aquele parâmetro não receba um valor na hora da chamada da função, o valor usar será o pré-definido:
+
+```python
+def comida_favorita(comida="pizza")
+    print("A minha comida favorita é {}".format(comida))
+
+comida_favorita("pastel")
+#>A minha comida favorita é pastel
+comida_favorita("acarajé")
+#>A minha comida favorita é acarajé
+comida_favorita()
+#>A minha comida favorita é pizza
+comida_favorita("canjica")
+#>A minha comida favorita é canjica
+
+# No exemplo abaixo, a função raiz() tem dois parâmetros: radicando e indice
+# Por padrão, indice vale 2, o que significa que calculamos raízes quadradas
+# Porém,se passarmos um outro valor no parâmetro indice, mudaremos o tipo de raíz
+
+def raiz(radicando, indice=2):
+    r = radicano**(1/indice)
+    return r
+
+print(raiz(4))
+#>2
+print(raiz(9))
+#>3
+print(raiz(125, 3))
+>#4.999999999999999
+```
+
+### Funções em construção: a instrução ```pass```
+
+Funções não podem ser vazias, ou seja, não possuirem linhas de código em seu bloco. Entretanto, quando queremos apenas definir a assinatura da função e construí-la depois, podemos preencher o bloco apenas com a instrução ```pass```, que significa algo como "ignore por enquanto".
+
+```python
+def conjunto_mandelbrot(z, c):
+    # ainda estou estudando como esse conjunto funciona
+    # o que sei por enquanto é que preciso de dois parâmetros: z, c
+    # volto quando eu absolver mais
+    pass
+```
+
+### Nomes e números variados de parâmetros
+
+Quando vimos número variado de parâmetros, aprendemos que podemos passar uma tupla de valores para a função usando a sintaxe ```*``` antes do nome do único parâmetro. Se por um acaso quisermos definir, além dos múltiplos valores, os nomes dos parâmetros, usamos uma sintaxe semelhante, mas agora com dois asteriscos ```**``` antes do nome do único parâmetro. Dessa forma, estaremos passando um dicionário para a função, de tal forma que cada par ```nome=valor``` passado como parâmetro será interpretado como um elemento respectivo ```chave=valor``` do dicionário:
+
+```python
+
+# PRIMEIRO EXEMPLO: mostrando que o parâmetro construído é um dicionário
+# aqui não fazemos uso direto de alguma chave, apenas mostramos o conteúdo completo
+
+def configuracao(**arg):
+    print(arg)
+
+configuracao(ip="localhost", porta=26225)
+#>{'ip': 'localhost', 'porta': 26225}
+configuracao(sistema="linux", versao=5.12, distro="Ubuntu")
+#>{'sistema': 'linux', 'versao': 5.12, 'distro': 'Ubuntu'}
+
+# SEGUNDO EXEMPLO: esperando um valor específico dentre os parâmetros passados
+# como o único parâmetro é um dicionário, podemos acessar os valores através de chaves
+
+def conexao(**arg):
+    print("Tentando conexão na porta {}".format(arg["porta"]))
+    print("Todos os parâmetros: {}".format(arg))
+
+conexao(porta=666, sistema="Linux")
+#>Tentando conexão na porta 666
+#>Todos os parâmetros: {'porta': 666, 'sistema': 'Linux'}
+conexao(porta=2255, sistema="Windows", versao=10)
+#>Tentando conexão na porta 2255
+#>Todos os parâmetros: {'porta': 2255, 'sistema': 'Windows', 'versao': 10}
+
+# Caso chamemos conexao() sem um parâmetro com nome porta, geraremos um erro de chave:
+
+conexao(sistema="Windows", versao="XP")
+#>KeyError: 'porta'
 ```
