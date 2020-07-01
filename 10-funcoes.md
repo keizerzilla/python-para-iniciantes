@@ -274,7 +274,7 @@ def multiplica(a, b):
     return a * b
 
 def divide(a, b):
-    return a /b
+    return a / b
 
 # a variável operacao é iniciada com None para indicar que ela não guarda nada até o momento
 # dependendo da escolha do usuário, operacao receberá uma das 4 funções que escrevemos
