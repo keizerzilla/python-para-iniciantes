@@ -253,3 +253,53 @@ conexao(porta=2255, sistema="Windows", versao=10)
 conexao(sistema="Windows", versao="XP")
 #>KeyError: 'porta'
 ```
+
+### Variáveis que guardam funções
+
+É possível armazenar uma função em uma varíavel. Atenção: não o valor de retorno de uma função, mas a própria função. Imagine que você precise executar uma certa função com base numa escolha feita pelo usuário; por exemplo, qual operação matemática num programa de calculadora. Python permite que guardemos o nome de uma função em um variável e, assim, chamar a função em questão via essa variável. Variáveis que guardam funções são normalmente chamadas de "variáveis coringa".
+
+Atribuímos uma função a uma variável usando o operador ```=``` onde na esquerda temos a variável e na direita apenas o nome da função. Por exemplo:
+
+```python
+# usaremos a função exit() do módulo sys para abortar o programa em caso de erro
+import sys
+
+def soma(a, b):
+    return a + b
+
+def subtrai(a, b):
+    return a - b
+
+def multiplica(a, b):
+    return a * b
+
+def divide(a, b):
+    return a /b
+
+# a variável operacao é iniciada com None para indicar que ela não guarda nada até o momento
+# dependendo da escolha do usuário, operacao receberá uma das 4 funções que escrevemos
+
+operacao = None
+print("Escolha a operação que executarei em cima de 10 e 2:")
+print("1- Soma\n2- Subtração\n3- Multiplicação\n4- Divisão")
+escolha = int(input("> "))
+
+if escolha == 1:
+    operacao = soma
+elif escolha == 2:
+    operacao = subtrai
+elif escolha == 3:
+    operacao = multiplica
+elif escolha == 4:
+    operacao = divide
+else:
+    print("Opção inválida!")
+    sys.exit()
+
+# se a escolha tiver sido válidam, operacao guarda uma das funções que definimos
+# podemos chamar a função de maneira direta através da variável operacao
+# imagine que a variável é um "coringa"
+
+resultado = operacao(10, 2)
+print("Resultado:", resultado)
+```
