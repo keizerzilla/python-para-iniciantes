@@ -51,3 +51,11 @@ A função deve receber a quantidade de linhas e de colunas da moldura, além do
 ```
 
 Escreva uma função que receba uma matriz de números e retorna ```True``` se a matriz representar um quadrado mágico ou ```False``` caso contrário. A matriz pode ter qualquer tamanho, contanto que o número de linhas e colunas seja igual (2x2, 3x3, 4x4, 5x5, etc).
+
+> A próxima função é mais um exercício de matemática que de funções. Portanto, declaro que ela é opcional.
+
+**10.opcional:** Escreva uma função que aproxima o número Pi usando a série de Gregory–Leibniz descrita como:
+
+![Séria de Gregory-Leibniz](https://i.imgur.com/9MO4ai5.png)
+
+A função deve receber como parâmetro o intervalo superior do somatório e retornar o valor de Pi encontrado.
