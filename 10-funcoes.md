@@ -1,3 +1,4 @@
+
 ## AULA 10: Funções
 
 Até o momento já estamos bastante familiarizados com o uso de funções, como ```print()```, ```input()```, e ```len()```, para citar apenas três. Formalmente, definimos função como um bloco de código que só é executado quando é chamado. Você pode passar dados (parâmetros) como entrada para funções e retornar dados como resultado. Nesta aula aprenderemos como construir nossas próprias funções em Python.
@@ -21,6 +22,8 @@ def soma(a, b):
 ```
 
 Primeiro, damos um nome à nossa função. Depois, passamos a lista de parâmetros entre parênteses, separados entre si por vírgula. Terceiro, fechamos essa primeira linha com o dois-pontos ```:```. Essa linha que definie o nome e os parâmetros da função é chamada de **assinatura**.
+
+É muito comum encontrarmos a palavra "argumento" como sinônimo de parâmetro. Em inglês, inclusive, usa-se a palavra _argument_ para representar o conceito de parâmetro. Até que se mostre o contrário, parâmetro e argumento são sim sinônimos, mas em alguns contextos podem representar coisas diferentes. Usaremos apenas a palavra parâmetro para representar os dados passados como entrada de um função.
 
 Escrevemos nas linhas seguintes o bloco de código da função. Assim como os outros blocos de código que já vimos, como o do ```if``` e o do ```while```, é a identação que define quando o bloco começa e termina. Portanto, é a identação que diz quando a função começa e termina. No caso da função ```soma()```, o bloco de código possui apenas duas linhas, mas poderia ter apenas uma como várias.
 
@@ -104,7 +107,7 @@ resultado = soma(10)
 #>TypeError: soma() missing 1 required positional argument: 'b'
 ```
 
-Veremos a seguir outras maneiras de definir a quantidade de argumentos.
+Veremos a seguir outras maneiras de definir a quantidade de parâmetros.
 
 ### Número variado de parâmetros
 
@@ -154,7 +157,7 @@ res4 = multi_soma(4)
 #>4
 ```
 
-### Chaveando argumentos
+### Chaveando parâmetros
 
 Vimos que, por definição, chamamos uma função passando os parâmetros na ordem que estes foram definidos. Entretanto, Python permite que a ordem dos parâmetros seja embaralhada na chamada da função. Para isso, basta passarmos os valores dos parâmetros usando explicitamente os nomes dos respectivos parâmetros numa sintaxe ```nome=valor```:
 
@@ -217,48 +220,30 @@ def conjunto_mandelbrot(z, c):
     pass
 ```
 
-### Nomes e números variados de parâmetros
-
-Quando vimos número variado de parâmetros, aprendemos que podemos passar uma tupla de valores para a função usando a sintaxe ```*``` antes do nome do único parâmetro. Se por um acaso quisermos definir, além dos múltiplos valores, os nomes dos parâmetros, usamos uma sintaxe semelhante, mas agora com dois asteriscos ```**``` antes do nome do único parâmetro. Dessa forma, estaremos passando um dicionário para a função, de tal forma que cada par ```nome=valor``` passado como parâmetro será interpretado como um elemento respectivo ```chave=valor``` do dicionário:
-
-```python
-
-# PRIMEIRO EXEMPLO: mostrando que o parâmetro construído é um dicionário
-# aqui não fazemos uso direto de alguma chave, apenas mostramos o conteúdo completo
-
-def configuracao(**arg):
-    print(arg)
-
-configuracao(ip="localhost", porta=26225)
-#>{'ip': 'localhost', 'porta': 26225}
-configuracao(sistema="linux", versao=5.12, distro="Ubuntu")
-#>{'sistema': 'linux', 'versao': 5.12, 'distro': 'Ubuntu'}
-
-# SEGUNDO EXEMPLO: esperando um valor específico dentre os parâmetros passados
-# como o único parâmetro é um dicionário, podemos acessar os valores através de chaves
-
-def conexao(**arg):
-    print("Tentando conexão na porta {}".format(arg["porta"]))
-    print("Todos os parâmetros: {}".format(arg))
-
-conexao(porta=666, sistema="Linux")
-#>Tentando conexão na porta 666
-#>Todos os parâmetros: {'porta': 666, 'sistema': 'Linux'}
-conexao(porta=2255, sistema="Windows", versao=10)
-#>Tentando conexão na porta 2255
-#>Todos os parâmetros: {'porta': 2255, 'sistema': 'Windows', 'versao': 10}
-
-# Caso chamemos conexao() sem um parâmetro com nome porta, geraremos um erro de chave:
-
-conexao(sistema="Windows", versao="XP")
-#>KeyError: 'porta'
-```
+Documentar o código é considerado uma boa prática de programação. Na opinião deste autor, seria a melhor de todas as práticas.
 
 ### Variáveis que guardam funções
 
 É possível armazenar uma função em uma varíavel. Atenção: não o valor de retorno de uma função, mas a própria função. Imagine que você precise executar uma certa função com base numa escolha feita pelo usuário; por exemplo, qual operação matemática num programa de calculadora. Python permite que guardemos o nome de uma função em um variável e, assim, chamar a função em questão via essa variável. Variáveis que guardam funções são normalmente chamadas de "variáveis coringa".
 
-Atribuímos uma função a uma variável usando o operador ```=``` onde na esquerda temos a variável e na direita apenas o nome da função. Por exemplo:
+Atribuímos uma função a uma variável usando o operador ```=```, onde na esquerda temos a variável e na direita apenas o nome da função. Por exemplo:
+
+```python
+def mensagem1():
+    print("Eu sou a função mensagem1! Oi! (:")
+
+def mensagem2():
+    print("Eu sou a função mensagem2! Que legal! :D")
+
+func = mensagem1
+func()
+#>Eu sou a função mensagem1! Oi! (:
+func = mensagem2
+func()
+#>Eu sou a função mensagem2! Que legal! :D
+```
+
+Talvez o exemplo mais comum de uso dessa técnica é quando a escolha de qual função ser executada é feita por código, como numa estrutura condicional ```if``` e/ou por intermédio da escolha do usuário que está executando o programa. Tomemos um exemplo conhecido de listas de exercício passadas onde queremos escrever um programa de calculadora simples com as operações de adição, subtração, multiplicação e divisão:
 
 ```python
 # usaremos a função exit() do módulo sys para abortar o programa em caso de erro
@@ -302,4 +287,72 @@ else:
 
 resultado = operacao(10, 2)
 print("Resultado:", resultado)
+```
+
+### Nomes e números variados de parâmetros: parâmetros opcionais
+
+Quando vimos número variado de parâmetros, aprendemos que podemos passar uma tupla de valores para a função usando a sintaxe ```*``` antes do nome do único parâmetro. Se por um acaso quisermos definir, além dos múltiplos valores, os nomes dos parâmetros, usamos uma sintaxe semelhante, mas agora com dois asteriscos ```**``` antes do nome do único parâmetro. Dessa forma, estaremos passando um dicionário para a função, de tal forma que cada par ```parametro=valor``` passado como parâmetro será interpretado como o elemento respectivo ```chave=valor``` do dicionário:
+
+```python
+
+# PRIMEIRO EXEMPLO: mostrando que o parâmetro construído é um dicionário
+# aqui não fazemos uso direto de alguma chave, apenas mostramos o conteúdo completo
+
+def configuracao(**arg):
+    print(arg)
+
+configuracao(ip="localhost", porta=26225)
+#>{'ip': 'localhost', 'porta': 26225}
+configuracao(sistema="linux", versao=5.12, distro="Ubuntu")
+#>{'sistema': 'linux', 'versao': 5.12, 'distro': 'Ubuntu'}
+
+# SEGUNDO EXEMPLO: esperando um valor específico dentre os parâmetros passados
+# como o único parâmetro é um dicionário, podemos acessar os valores através de chaves
+
+def conexao(**arg):
+    print("Tentando conexão na porta {}".format(arg["porta"]))
+    print("Todos os parâmetros: {}".format(arg))
+
+conexao(porta=666, sistema="Linux")
+#>Tentando conexão na porta 666
+#>Todos os parâmetros: {'porta': 666, 'sistema': 'Linux'}
+conexao(porta=2255, sistema="Windows", versao=10)
+#>Tentando conexão na porta 2255
+#>Todos os parâmetros: {'porta': 2255, 'sistema': 'Windows', 'versao': 10}
+
+# Caso chamemos conexao() sem um parâmetro com nome porta, geraremos um erro de chave:
+
+conexao(sistema="Windows", versao="XP")
+#>KeyError: 'porta'
+```
+
+É muito comum bibliotecas de código complexas usarem parâmetros opcionais para representar configurações extras de uma função. Além disso, foi informalmente padronizado pela comunidade Python que parâmetros opcionais são nomeados como ```**kwargs```. Abaixo temos um exemplo onde imaginamos estar desenvolvendo uma biblioteca que gera gráficos matemáticos; além de parâmetros que configuram os dados nos eixos horizontal e vertical e a cor do gráfico, alguns parâmetros opcionais podem ser passados para uma configuração mais detalhada do desenho:
+
+```python
+def plot(x_data, y_data, color, **kwargs):
+    # Nome: plot
+    # Descrição: desenha um gráfico de linhas na janela atual
+    # Parâmetros:
+    #    - x_data: lista com o intervalo do eixo horizontal
+    #    - y_data: lista com os valores respectivos no eixo vertical
+    #    - color: a cor da linha em formato (R, G, B)
+    #    - kwargs: parâmetros opcionais:
+    #        > all_space: se o gráfico deve ser desenhado no espaço inteiro da janela
+    #        > window: especifica a janela a ser usada em caso de mais de uma janela
+    #        > icon: especifica caractere a ser usada na marcação dos pontos
+    
+    # chamadas de mentirinha que configuram a janela com base nos parâmetros
+    _window.add_x(x_data)
+    _window.add_y(y_data)
+    _window.set_draw_color(color)
+    
+    # como os parâmetros opcionais estão guardados em dicionário, usamos 'in' para verificar
+    # quais foram passados ou não
+    # o acesso aos valores segue, portanto, as mesmas regras de dicionário: atráves da chave
+    if "all_space" in kwargs:
+        _window.set_layout(1)
+    if "window" in kwargs:
+        _window = kwargs["window"]
+    if "icon" in kwargs:
+        _window.set_draw_char(kwargs["icon"])
 ```
