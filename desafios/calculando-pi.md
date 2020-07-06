@@ -8,6 +8,6 @@ A função deve receber como parâmetro o intervalo superior do somatório e ret
 
 **Sugestões legais:**
 
-- observe como o número Pi encontrado muda em função da quantidade de interações escolhidas
+- observe como o número Pi encontrado muda em função da quantidade de interações escolhida
 - use o valor pré-calculado presente no módulo ```math``` para comparar com a sua implementação
 - pesquise alguma ferramenta gráfica simples (como o plotter do Mu) para visualizar a evolução do valor calculado
