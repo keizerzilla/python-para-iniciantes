@@ -42,7 +42,7 @@
 
 A função deve receber a quantidade de linhas e de colunas da moldura, além do caractere usado para montá-la. Por padrão, o caractere de montagem deve ser ```-```, como no exemplo acima.
 
-**10.11:** Um quadrado mágico é um conjunto de números dispostos em linhas e colunas (matematicamente chamado de matriz) de forma que a soma dos valores de qualquer linha, qualquer coluna ou qualquer diagonal é sempre a mesma. Por exemplo, matriz 3x3 (pois tem 3 linhas e 3 colunas) abaixo é dita mágica de valor 15 pois esse é o resultado de qualquer soma de linha, coluna ou diagonal:
+**10.11:** Um quadrado mágico é um conjunto de números dispostos em linhas e colunas (matematicamente chamado de matriz) de forma que a soma dos valores de qualquer linha, qualquer coluna ou qualquer diagonal é sempre a mesma. Por exemplo, a matriz 3x3 (pois tem 3 linhas e 3 colunas) abaixo é dita mágica de valor 15 pois esse é o resultado de qualquer soma de linha, coluna ou diagonal:
 
 ```
 8  3  4 
