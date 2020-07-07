@@ -381,9 +381,11 @@ Criar funções vazias ou em construção é muito fácil. Basta preencher o blo
 
 ```python
 def conjunto_mandelbrot(z, c):
-    # ainda estou estudando como esse conjunto funciona
-    # o que sei por enquanto é que preciso de dois parâmetros: z, c
-    # volto quando eu absolver mais
+    """
+    Ainda estou estudando como esse conjunto funciona...
+    O que sei por enquanto é que preciso de dois parâmetros: z, c
+    Volto quando eu aprender mais!
+    """
     pass
 ```
 
