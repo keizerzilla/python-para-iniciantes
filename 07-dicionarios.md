@@ -143,6 +143,7 @@ print(len(tabela))
 - ```.clear```: limpa o dicionário (apaga todos os itens)
 - ```.update()```: adiciona um novo item ao dicionário
 - ```.items()```: gera pseudo-tuplas; primeiro elemento é a chave e segundo elemento, o valor
+- ```.get()```: retorna valor de uma chave; se não a encontrar, retorna um valor pré-definido
 
 #### ```.keys()```: retorna uma lista com todas as chaves
 #### ```.values()```: retorna uma lista com todos os valores
@@ -240,6 +241,26 @@ for chave, valor in agenda.items():
 #>O telefone de Maria é 23451918
 #>O telefone de Roberto é 99015544
 #>O telefone de Marcos é 33427640
+```
+
+#### - ```.get()```: retorna valor de uma chave; se não a encontrar, retorna um valor pré-definido
+
+```python
+freq = {
+    "oi" : 3,
+    "casa" : 65,
+    "proletariado" : 18,
+    "carro" : 9
+}
+
+print(freq.get("oi", 0)) # procura pela chave "oi": se achar, retorna valor; senão, retorna 0
+#>3
+print(freq.get("proletariado", 0)) # procura pela chave "proletariado": se achar, retorna valor; senão, retorna 0
+#>18
+print(freq.get("livro", 0)) # procura pela chave "livro": se achar, retorna valor; senão, retorna 0
+#>0
+
+# O segundo parâmetro pode ser qualquer valor, não apenas 0!
 ```
 
 ### Percorrendo chaves usando laço ```for```
