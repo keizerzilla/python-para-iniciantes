@@ -1,3 +1,4 @@
+
 ## EXERCÍCIO 10: Funções
 
 > A maioria dos exercícios desta lista pedirá para que você escreva uma ou mais funções. Além de implementá-las, você também deve escrever o código necessário que as chama e as testa.
@@ -51,3 +52,69 @@ A função deve receber a quantidade de linhas e de colunas da moldura, além do
 ```
 
 Escreva uma função que receba uma matriz de números e retorna ```True``` se a matriz representar um quadrado mágico ou ```False``` caso contrário. A matriz pode ter qualquer tamanho, contanto que o número de linhas e colunas seja igual (2x2, 3x3, 4x4, 5x5, etc).
+
+### EXTRAS
+
+**10E.01:** Escreva uma função que receba uma string e retorne um dicionário de duas chaves, ```maiusculas``` e ```minusculas```, cujos valores são a quantidade de letras maíusculas e minúsculas, respectivamente.
+
+_Exemplo:_
+
+```
+entrada: "Olá, meu nome é Ednaldo. Se escreve E-D-N-A-L-D-O."
+saída: {'maiusculas': 10, 'minusculas': 24}
+```
+
+_Dicas:_
+
+- Procure pelos métodos de string ```.isupper()``` e ```.islower()```
+
+**10E.02:** Escreva uma função que receba uma string e retorne um dicionário cujas chaves sejam as palavras da string e o valor correspondente a quantidade de ocorrências da palavra.
+
+_Exemplo:_
+
+```
+entrada: "casa limpa é casa bem cuidada e bem cheirosa"
+saída: {'casa': 2, 'limpa': 1, 'é': 1, 'bem': 2, 'cuidada': 1, 'e': 1, 'cheirosa': 1}
+```
+
+**10E.03:** Escreva uma função que receba um dicionário como entrada e exibe na tela uma tabela cuja primeira colunas guardará as chaves do dicionário e a segunda coluna, os valores correspondentes.
+
+_Exemplo:_
+
+```
+entrada: {"nome" : "Artur", "idade" : 28, "favoritos" : ["Hakkinen", "Raikkonen", "Kubica"]}
+saída:
+-------------------------------------------------
+CHAVES       VALORES
+-------------------------------------------------
+nome         Artur
+idade        28
+favoritos    ["Hakkinen", "Raikkonen", "Kubica"]
+-------------------------------------------------
+```
+
+_Dicas:_
+
+- O visual da tabela não precisa ser tal qual o exemplo. Use a criatividade!
+- O dicionário do exemplo não deve ser tomado como único formato possível. Qualquer dicionário deve servir de entrada.
+
+**10E.04:** Imagine um jogo de dados simples aonde dois jogadores rolam um dado ao mesmo tempo e marcam pontos caso o seu número foi maior que o do oponente. Em caso de empate no números rolados, nenhum ganha ponto. O jogo tem 7 rodadas, vence quem tiver marcado mais pontos.
+
+Escreva uma função que receba duas listas de números, a primeira representando as rolagens do jogador 1 e a segunda, do jogador 2. A função deve verificar quantos pontos cada jogador marcou e dizer quem venceu ou se deu empate.
+
+_Exemplo:_
+
+```
+entrada:
+[1, 4, 2, 6, 6, 3]
+[3, 3, 2, 5, 4, 5]
+saída:
+Jogador1: 3 pontos
+Jogador2: 2 pontos
+Jogador1 venceu!!!
+```
+
+_Dica:_
+
+- As listas com números podem ser geradas de maneira estática sem problema; o importante é validar o funcionamento da tua função.
+- A saída do programa pode ter um visual diferente do exemplo, mas deve mostrar obrigatoriamente as pontuações e quem venceu (ou se foi empate).
