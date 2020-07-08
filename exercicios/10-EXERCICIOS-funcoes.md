@@ -1,5 +1,49 @@
 
+
 ## EXERCÍCIO 10: Funções
+
+### AQUECIMENTO
+
+**10A.01:** Escreva uma função que recebe dois números ```a``` e ```b``` e retorna ```True``` se o primeiro foi maior ou igual ao segundo, ou ```False``` caso-contrário.
+
+**10A.02:** Escreva uma função que calcula o "quadrado de uma string": ele deve retornar dois valores: a string duplicada e o quadrado do tamanho da string (a string "Artur" tem 5 letras, portanto o quadrado seria 25).
+
+_Exemplo:_
+
+```
+entrada: "Ednaldo"
+saída: EdnaldoEdnaldo, 49
+```
+
+**10A.03:** Um colega aprendiz de hacker precisa de uma função para ajudá-lo a quebrar um conjunto de senhas criptografas que ele achou num pendrive na rua. Ele pediu ajuda a você, um hacker experiente, e te enviou uma lista de códigos criptografados:
+
+```
+H3KF92NFC0
+LKFI781YVN
+194KVK0L0A
+KDS929NVP7
+```
+
+Cada código representa uma senha. Ele descobriu que as senhas são constituídas apenas por 4 números na seguinte sequência:
+
+```
+<quantidade_consoantes><quantidade_vogais><quantidade_pares><quantidade_impares>
+```
+
+Ele quebrou a criptografia do primeiro código na mão, como exemplo:
+
+```
+H3KF92NFC0
+- 6 consoantes
+- 0 vogais
+- 2 pares
+- 2 impares
+SENHA: 6022
+```
+
+Ele pediu que você escrevesse uma função python que toma como entrada um string criptografada e retorna na saída uma string com a senha quebrada. Use o exemplo acima quebrado na mão para validar sua função.
+
+### LISTA ORIGINAL
 
 > A maioria dos exercícios desta lista pedirá para que você escreva uma ou mais funções. Além de implementá-las, você também deve escrever o código necessário que as chama e as testa.
 
