@@ -140,9 +140,9 @@ _Dicas:_
 - O visual da tabela não precisa ser tal qual o exemplo. Use a criatividade!
 - O dicionário do exemplo não deve ser tomado como único formato possível. Qualquer dicionário deve servir de entrada.
 
-**10E.04:** Imagine um jogo de dados simples aonde dois jogadores rolam um dado ao mesmo tempo e marcam pontos caso o seu número foi maior que o do oponente. Em caso de empate no números rolados, nenhum ganha ponto. O jogo tem 7 rodadas, vence quem tiver marcado mais pontos.
+**10E.04:** Imagine um jogo de dados simples onde dois jogadores rolam um dado ao mesmo tempo; marca ponto o jogador que rolar o maior número, e nenhum marca ponto em caso de empate. Vence quem tiver marcado mais pontos depois de 7 rodadas.
 
-Escreva uma função que receba duas listas de números, a primeira representando as rolagens do jogador 1 e a segunda, do jogador 2. A função deve verificar quantos pontos cada jogador marcou e dizer quem venceu ou se deu empate.
+Escreva uma função que receba duas listas de números, a primeira representando as rolagens do jogador 1 e a segunda, do jogador 2. A função deve verificar quantos pontos cada jogador marcou e dizer quem venceu (ou se deu empate).
 
 _Exemplo:_
 
