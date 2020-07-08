@@ -1,6 +1,6 @@
-
-
 ## EXERCÍCIO 10: Funções
+
+> A maioria dos exercícios desta lista pedirá para que você escreva uma ou mais funções. Além de implementá-las, você também deve escrever o código necessário que as chama e as testa.
 
 ### AQUECIMENTO
 
@@ -44,8 +44,6 @@ SENHA: 6022
 Ele pediu que você escrevesse uma função python que toma como entrada um string criptografada e retorna na saída uma string com a senha quebrada. Use o exemplo acima quebrado na mão para validar sua função.
 
 ### LISTA ORIGINAL
-
-> A maioria dos exercícios desta lista pedirá para que você escreva uma ou mais funções. Além de implementá-las, você também deve escrever o código necessário que as chama e as testa.
 
 **10.1:** Escreva uma função que receba o tamanho do lado de um quadrado e retorne a sua área.
 
