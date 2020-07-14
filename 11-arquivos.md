@@ -272,3 +272,11 @@ grande.close()
 ```
 
 Perceba que, em ambos os exemplos, a manipulação do arquivo foi uma manipulação de strings feita de maneira um pouco diferente. E de fato, usar arquivos texto nada mais é que manipular strings, a única diferença é de onde elas vem. Portanto, tenha em mente que seus conhecimentos de string devem estar em dia quando for usar arquivo texto.
+
+### ```.write()``` é o mesmo que ```print()```
+
+Ambas as funções servem para escrever strings. A diferença é que uma escreve em arquivo, a outra no console.
+
+### ```.read()``` é o mesmo que ```input()```
+
+Ambas as funções servem para ler strings. A diferença é que uma lê de um arquivo, a outra do console.
