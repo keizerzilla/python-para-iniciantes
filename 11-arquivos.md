@@ -58,6 +58,14 @@ Além do caractere de modo, devemos usar o código de tipo de arquivo:
 
 Portanto, se quisersmos abrir um arquivo para leitura em texto, usaremos o código ```"rt"```; atualização em binário seria ```"+b"``` e escrita em texto ficaria ```"wt"```, por exemplo. A ordem dos códigos de modo e tipo não importa. Qualquer combinação é possível. Se o modo de arquivo não for especificado, a função ```open()``` usará ```"rt"``` como valor padrão.
 
+### Para facilitar: ```.write()``` é o mesmo que ```print()```
+
+Ambas as funções servem para _escrever_ strings. A diferença é que uma escreve em arquivo, a outra no console.
+
+### Para facilitar: ```.read()/.readline()``` é o mesmo que ```input()```
+
+Ambas as funções servem para _ler_ strings. A diferença é que uma lê de um arquivo, a outra do console.
+
 ### Escrevendo em arquivos: a função ```.write()```
 
 Usamos a função ```.write()``` para escrever dados em um arquivo. Ela é chamada pelo objeto que representa o arquivo onde queremos escrever e seu parâmetro é um string com aquilo que deve ser escrito. Por exemplo, vamos criar um arquivo chamado ```"nome.txt"``` em modo de escrita em texto e escrever a string ```Ednaldo Pereira``` nele:
@@ -272,11 +280,3 @@ grande.close()
 ```
 
 Perceba que, em ambos os exemplos, a manipulação do arquivo foi uma manipulação de strings feita de maneira um pouco diferente. E de fato, usar arquivos texto nada mais é que manipular strings, a única diferença é de onde elas vem. Portanto, tenha em mente que seus conhecimentos de string devem estar em dia quando for usar arquivo texto.
-
-### ```.write()``` é o mesmo que ```print()```
-
-Ambas as funções servem para escrever strings. A diferença é que uma escreve em arquivo, a outra no console.
-
-### ```.read()/.readline()``` é o mesmo que ```input()```
-
-Ambas as funções servem para ler strings. A diferença é que uma lê de um arquivo, a outra do console.
