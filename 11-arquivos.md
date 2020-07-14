@@ -277,6 +277,6 @@ Perceba que, em ambos os exemplos, a manipulação do arquivo foi uma manipulaç
 
 Ambas as funções servem para escrever strings. A diferença é que uma escreve em arquivo, a outra no console.
 
-### ```.read()``` é o mesmo que ```input()```
+### ```.read()/.readline()``` é o mesmo que ```input()```
 
 Ambas as funções servem para ler strings. A diferença é que uma lê de um arquivo, a outra do console.
