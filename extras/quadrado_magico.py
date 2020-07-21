@@ -39,7 +39,11 @@ def eh_magico(matriz):
         col += 1
     if soma_diag_secundaria != soma_ref:
         return False
-
+    
+    # se a execucao chegou ateh aqui, eh pq todas as
+    # condicoes do quadrado magico foram satisfeitas
+    # soh resta retornar True com a certeza:
+    # a matriz eh sim um quadrado magico
     return True
 
 mat = [
