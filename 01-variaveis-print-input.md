@@ -1,14 +1,14 @@
-## AULA 01: VARIÁVEIS, PRINT() E INPUT()
+# AULA 01: VARIÁVEIS, PRINT() E INPUT()
 
 Os três aspectos mais comuns de um programa de computador, seja qual for a linguagem em que ele foi escrito, são:
 
-1- **armazenamento em variáveis**
+1- **variáveis**
 
 2- **saída de dados**
 
 3- **entrada de dados**
 
-### Variáveis
+## Variáveis
 
 Variável é um espaço da memória do computador que armazena um dado. Em Python, uma variável é definida a partir de um *nome* e um *valor*. Usa-se o símbolo = para atribuir/armazenar/definir o valor de uma variável. Por exemplo:
 
@@ -27,7 +27,7 @@ Existem algumas regras para definir nomes de variáveis. Eles podem ser curtos (
 - Uma variável pode conter APENAS caractéres alfanuméricos e sublinhados (A-Z, a-z, 0-9, _)
 - Variáveis são sensíveis à capitalização (```idade```, ```Idade``` e ```IDADE``` são tratadas como três variáveis diferentes)
 
-### A função de saída mais comum: print()
+## A função de saída mais comum: print()
 
 Função é um comando especial. Uma função é definida por um nome seguido por um abre e fecha parênteses. Dentro dos parênteses colocamos dados que serão usados pela função (chamamos esses dados de **parâmetros** ou **argumentos da função**). Uma função pode ou não retornar valores (também chamados de resultados). Python possui várias funções já inclusas, além de permitir que o programador crie as suas próprias funções. Veremos como construir uma função em tempo oportuno, além de uma lista de funções super legais disponíveis. Por enquanto, apresentaremos duas funções importantes e super úteis em diversos programas escritos em Python. A primeira delas é a print().
 
@@ -51,7 +51,7 @@ print(num2)
 #>>10
 ```
 
-### A função de entrada mais comum: input()
+## A função de entrada mais comum: input()
 
 Enquanto a função print() exibe dados, ou seja, é um função de saída, a função input() é usada para capturar dados, ou seja, é uma função de entrada. Assim como a print(), você também pode passar uma mensagem como argumento (dentro dos parênteses) para facilitar a iteração entre o programa e o usuário. Agora, diferente da print(), a input() é uma função que retorna um resultado. Isso quer dizer que você pode armazenar esse resultado em uma variável, através do operador =.
 
