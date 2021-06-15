@@ -480,3 +480,6 @@ print("Começando!")
 mouse.move(700, 700, duration=2)
 print("Viu? (:")
 ```
+## EXERCÍCIOS 09: Módulos
+
+**Questão Única:** Trabalhar nos projetos.
