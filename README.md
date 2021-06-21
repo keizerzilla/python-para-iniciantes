@@ -1,4 +1,4 @@
-# 🐍 Curso ""Python para Iniciantes"
+# 🐍 Curso "Python para Iniciantes"
 
 **Professor:** Artur Rodrigues Rocha Neto
 
