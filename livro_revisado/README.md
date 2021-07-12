@@ -1,5 +1,7 @@
 # Revisão
 
-A primeira versão das notas de aula eram mais parecidas com um bloco de notas de sintaxe do que com ensaios sobre programação e computadores. Da mesma forma que uma das melhoras formas de aprender um idioma estrangeiro é absorvendo a cultura de países que o falam, aprender uma linguagem de programação requer se familiarizar com a forma que computadores agem e, de certa forma, pensam.
+A primeira versão das notas de aula era mais parecida com um bloco de notas de sintaxe do que com aulas de verdade sobre programação e computadores. Portanto, os textos mais pareciam compor um "manual de código" do que um "livro de programação".
 
-O objetivo da versão revisada das notas, agora compilados como livro, é construir um guia mais flúido e coeso, que instiga o conhecimento e exploração ao invês de jogar pedaços de código. Ensinar a programar de uma forma que não seja o equivalente ao "B com A: BA".
+Da mesma forma que uma das melhoras formas de aprender uma lingua estrangeiro é absorvendo a cultura de países que a usam, aprender uma linguagem de programação é entender como os computadores agem e, em certa medida, "pensam".
+
+O objetivo desta versão revisada das notas, agora compilada como livro, é construir um guia mais flúido e coeso, que incentive a exploração e criatividade ao invês de apenas jogar pedaços de código soltos e pequenas linhas explicando o resultado.
