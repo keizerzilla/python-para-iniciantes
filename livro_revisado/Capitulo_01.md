@@ -2,7 +2,19 @@
 
 ## O que é um computador?
 
-## Como um computador funciona?
+Chamamos de computador toda máquina eletrônica capaz de realizar cálculos e tarefas de maneira sequencial. Por exemplo, imagine uma máquina eletrônica que possui os seguintes componentes:
+
+1. Um teclado aonde se pode inserir números
+2. Um monitor onde se pode ver os números inseridos e os resultados
+3. Um processador capaz de executar operações matemáticas nesses números
+
+O funcionamento dessa máquina hipotética é simples: você insere dois números pelo teclao (4 e 7, por exemplo) e o Processador soma os dois e mostra o resultado (no caso, 11). O **computador** é a máquina que é capaz de ler os dados do teclado, executar uma tarefa (somar) e mostrar o resultado da tarefa numa saída, o monitor. Chamamos de **algoritmo** um conjunto de tarefas realizadas para se atingir um objetivo.
+
+- Ler dois números do teclado
+- Somar os dois números
+- Mostrar o resultado da soma na tela
+
+## As partes de um computador
 
 ### Processador
 
